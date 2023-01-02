@@ -1,6 +1,7 @@
 # learnlua.lua
 
-Speed Learn Lua with a comprehensive guide
+Speed Learn Lua with a comprehensive guide.<br>
+*This is more intuitive for a more experienced programmer*
 
 Created by exoad
 
