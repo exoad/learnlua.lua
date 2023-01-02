@@ -36,12 +36,16 @@ print() --[[
   Indentations and spacing are only enforced for specific codes and you will know when.
   For most of the time, indentation is not enforced while spacing between terms are enforced.
 
-  My vocabular:
+  My vocabulary:
 
   "raw-value" or "value" -> Literally raw values, like 1, 2, "3", "hello"
       -These are not variables
       -They can be return resultants from a function
   "variable" -> A raw value that has a name attached to it
+
+  All reserved words & operators in Lua:
+  and,break,do,else,elseif,and,false,for,function,if,in,local,nil,not,or,repeat,return,then
+    true,until,while,+,-,*,/,%,^,#,==,~=,<=,>=,<,>,=,(,),{,},[,],;,:,,,.,..,...
 ]]
 
 
