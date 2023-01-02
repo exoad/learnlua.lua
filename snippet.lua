@@ -28,6 +28,10 @@ print() --[[
   By running it with arguments like print("Hello World") -> Hello World will be printed to the
 ]]
 
+--[[
+  Indentations and spacing are only enforced for specific codes and you will know when.
+  For most of the time, indentation is not enforced while spacing between terms are enforced.
+]]
 
 -----------------------
 --[[ SECTION TYPES ]]--
@@ -266,3 +270,49 @@ end --[[
   This format also increases readability
 ]]
 
+
+---------------------------
+--[[ SECTION FUNCTIONS ]]--
+---------------------------
+
+function fun()
+  print("Function!")
+end --[[
+  Functions declare snippets of code that can be called and reused later.
+
+  Functions follow the format of:
+
+      function functionName(args) <- The function start
+        todo <- Stuffs to execute
+      end <- The end of the function declaration (similar to a conditional block) ends with "end"
+
+      ^^^^^
+      The function start also contains "args" which can be left blank or provided with a
+      required argument to take. This is called function input/argument.
+]]
+
+function add(a, b)
+  return a + b
+end
+print(add(1, 2)) --[[
+  Functions can take input via adding variable names in between the parentheses.
+
+  This now means add() requires two arguments in order to work
+
+  The "return" statement is straightforward, it represents a possible result
+  the function wants to return. However we cannot specify anything else after
+  this "return" statement
+      -If no "return" statement is found, the function will not return a resultant:
+          function m(a,b) c = a+b end
+          print(m(1,2)) -> Nothing or ""
+      -This is similar in many other languages: Kotlin/Java, C/C++, JavaScript/TypeScript
+]]
+
+fun() --[[
+  Similar to calling print() and type()
+  calling any other function is as simple as:
+
+      functionName(args?)
+
+      args? -> If argument required
+]]
