@@ -8,6 +8,9 @@
   Extra Materials:
       1) https://www.lua.org/manual/5.1/manual.html
       2) http://lua-users.org/wiki/TutorialDirectory
+
+  This guide covers the extense of most modern Lua dialects.
+  Starting from 5.2
 ]]
 
 ------------------------
@@ -267,6 +270,39 @@ print("Hello World" + "its me") --[[
         3|   var a
         4| end
     Variable "b" is alive from lines 1-4 while variable "a" is only alive within 2-3 (exclusive)
+
+    In Lua, a variable without a scope modifier is referred to as a global variable.
+
+    To avoid conflicts between naming we add the "local" scope modifier infront of a variable name:
+
+      1| local myVariable = nil
+
+    ^^^^
+    Local variables only exist in their permitted block and nowhere else.
+
+    [!] Every loop iteration and function call creates a new scope with new variables.
+    [!] Generally you want to use "local" specifiers as much as possible in order to:
+            1. Make your code more readable
+            2. Create less trap variables that can lead to undesired behaviors.
+]]
+
+local t = 3
+t = t + 2 -- Here t is referenced and a global reference is not created.
+
+local function f() end
+local f2
+f2 = function() end
+local f3 = function() end --[[
+  This section from lua-users.org:
+  """
+  the difference between the last two examples is important: the local variable still doesn't exist to the right of the = that gives it the initial value. So if the contents of the function used f to get a reference to itself, it will correctly get the local variable in the first and second versions, but the third version will get the global f (which will be nil, if not a completely unrelated value set by some other code).
+  """
+]]
+
+--[[
+  Closures are the effect that functions (local or not) can use locale variables outside; these functions
+  are therefore referred to as "closures"
+      -The function sees any changes to the variable outside
 ]]
 
 
@@ -276,7 +312,7 @@ print("Hello World" + "its me") --[[
 --[[
   For any boolean expression Lua treats:
 
-    nil, false -> FALSE
+    nil, false    -> FALSE
     Anything else -> TRUE
 
     Statements like variable assignment are not treated as valid boolean expressions
@@ -338,6 +374,17 @@ end --[[
     X == Y -> X equals Y
     X ~= Y -> X does not equal Y
 
+  [!] When used with strings, they are evaluated based on the string's alphabetical ordering
+  [!] Type coercion does not work thus a statement like
+
+        1| print("1" == 1)
+
+        ^^^
+        Returns false, and thus you have to use tonumber() or tostring()
+
+  [!] When used with objects, they are not equal if:
+          1. The types are different
+          2. Refer to different objects
 ]]
 
 if not myVar == 3 then
@@ -372,14 +419,14 @@ end --[[
   This format also increases readability
 ]]
 
---[[LOOPS]]--
---[[
-  Control statements for loops are:
+myLuaElvis = 1+1==2 and "Yes" or "No" --[[
+  Implementation of a basic Ternary operation in Lua.
 
-    break
-    continue
-
+  Lua does not support Ternary or Elvis Operators for one line IF-ELSE
 ]]
+
+
+--[[LOOPS]]--
 
 while myBool do print("Hello World") end --[[
   This is a basic LOOP. A while loop uses a boolean condition to make the loop run.
@@ -455,6 +502,29 @@ for key,val in ipairs(myTable) do print(key.." "..val) end --[[
   [itr-expr] represents a valid iterator function. Most commonly we use the "ipairs()"
     function to retrieve a key and value pair.
 ]]
+
+--[[
+  Control statements for loops are:
+
+    break -> jump out of the innertmost loop
+    goto [expr] -> tell the program to go to this point in the program
+      - Goto a expression can be marked with "::[expr-name]::"
+
+      Like so:
+
+      1| while true do
+      2|  if someVar > 100 then
+      3|    goto outside
+      4|  end
+      5| end
+      6| ::outside::
+
+]]
+myVarA = 1
+while true do
+  myVarA = myVarA + 1
+  if myVarA > 5 then break end
+end -- BREAK PATTERN DEMONSTRATION
 
 ---------------------------
 --[[ SECTION FUNCTIONS ]]--
@@ -543,3 +613,73 @@ string.lower("yoink")     -- Makes all characters in a string to lowercase (ABC 
 math.min(2, 30000)        -- Returns the smallest of the two
 math.max(2, 30000)        -- Returns the largest of the two
 math.random(0, 100)       -- Returns a pseudorandom number from [start, end) where "end" is excluded and "start" is included
+
+
+-----------------------------------------------
+--[[ SECTION METAPROGRAMMING & METAMETHODS ]]--
+-----------------------------------------------
+--[[
+  Metamethods in Lua enables the programmer to overload certain functionalities in Lua objects.
+      -Similar to the concept of operator overloading in a language like C++
+
+  Metables is a regular Table data structure that holds metamethods that can be called when specific
+  events in Lua are called. Like for example addition ("+" -> __add)
+
+  To make a metatable work, we can use the following examplar:
+]]
+local myObj = { attribute = ":)" }
+local myMetaTable = {
+  __add = function(lhs, rhs) -- here lhs -> LeftHandSide & rhs -> RightHandSide
+      return { value = lhs.attribute .. rhs.attribtue } -- the desired operation for when the "+" or addition operation is performed on
+                                                        -- two objects of myObj
+  end
+}
+setmetatable(myObj, myMetaTable) -- tell Lua we have a new metamethod we want to add
+--[[
+  Thus we can now do things like
+
+      1| local myObjFinal = myObj + myObj
+      2| print(myObjFinal)
+]]
+
+--[[
+  You can find a list of most overloadable metamethods that you can use here:
+  http://www.lua.org/manual/5.4/manual.html#2.4
+]]
+
+
+-------------------------
+--[[ SECTION MODULES ]]--
+-------------------------
+--[[
+  Modules is the most basic way for Lua code to be bundled and used together.
+
+  You declare in the following fashion:
+
+ -- BEGIN: file testModule.lua --
+  1| local testModule = {} -- Note you don't specifically have to name the module the same as the file name
+  2| function testModule.someFun() print("This is a test") end
+  3| return testModule
+-- END: file testModule.lua
+  To use this module in some other file, we use
+  the "require" keyword:
+-- BEGIN: file testMyModule.lua --
+  1| tM = require 'testModule'
+  2| tM.someFun() -- prints "This is a test"
+
+Modules are cached in the global table "package.loaded".
+    -this also provides us the ability to reload:
+
+      1| package.loaded.someModule = nil
+      2| m = require 'someModule'
+
+You can think of this as a JavaScript Module.exports:
+
+    1| const pkgCode = require("myCodeHere")
+
+Or you can think of it as a C++ Namespace, Java Import/Class/Module
+]]
+
+
+
+
