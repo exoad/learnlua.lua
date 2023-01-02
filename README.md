@@ -7,6 +7,8 @@ Created by exoad
 
 My journey with Lua
 
+Targetted for 5.2+
+
 ## Reading
 
 Coding style is presented with a simple example followed by a commented explanation.
