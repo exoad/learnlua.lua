@@ -21,4 +21,11 @@ print() --[[
 ]]
 ```
 
+Each section is marked with a commented feature like so:<br>
+```lua
+-------------------
+--[[ SECTION A ]]--
+-------------------
+```
+
 > Always work in progress (for improvements) :)
