@@ -1,4 +1,5 @@
 # learnlua.lua
+
 Speed Learn Lua with a comprehensive guide
 
 Created by exoad
@@ -19,3 +20,5 @@ print() --[[
   By running it with arguments like print("Hello World") -> Hello World will be printed to the
 ]]
 ```
+
+> Always work in progress (for improvements) :)
