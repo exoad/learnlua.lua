@@ -11,7 +11,7 @@ My journey with Lua
 
 Coding style is presented with a simple example followed by a commented explanation.
 
-The de facto code is stamped in `./snippet.lua`. This code is not usable but only for evaluation!
+The de facto code is stamped in `./snippet.lua`. This code is not usable and only for evaluation!
 
 For example:<br>
 ```lua
