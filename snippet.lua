@@ -7,6 +7,7 @@
 --[[
   Extra Materials:
       1) https://www.lua.org/manual/5.1/manual.html
+      2) http://lua-users.org/wiki/TutorialDirectory
 ]]
 
 ------------------------
@@ -31,7 +32,15 @@ print() --[[
 --[[
   Indentations and spacing are only enforced for specific codes and you will know when.
   For most of the time, indentation is not enforced while spacing between terms are enforced.
+
+  My vocabular:
+
+  "raw-value" or "value" -> Literally raw values, like 1, 2, "3", "hello"
+      -These are not variables
+      -They can be return resultants from a function
+  "variable" -> A raw value that has a name attached to it
 ]]
+
 
 -----------------------
 --[[ SECTION TYPES ]]--
@@ -87,7 +96,7 @@ myVariable = nil --[[
     -typeValue is the value to set the variable to
         a.) This value is a value associated to a type, for example "myVariable = 123" would mean myVariable
             holds a "Number" type with value 123
-
+    -The assignment operator "="
   When you are unsure of the starting value, always declare the variable to "nil"
 
   - Variables may be reassigned for example:
@@ -120,6 +129,74 @@ tostring() --[[
     tostring(nil)   -> "nil"
 ]]
 
+
+---------------------------------
+--[[ SECTION DATA STRUCTURES ]]--
+---------------------------------
+myTable = {} --[[
+  This is the only default data structure in Lua. This can be associated as an array or a table.
+
+  When treated as a table, we use mostly non-numeric String based keys.
+
+  When treated as an array, we use numeric based keys.
+
+  [!] VERY IMPORTANT. REMEMBER THAT LUA TREATS THE FIRST INDEX OF A TABLE/ARRAY AS "1" NOT "0"
+
+  There are no generic array types in Lua and thus we can mix both numeric and String based
+  keyvalues in Lua.
+
+  They are declared with "{}"
+
+  We can access and manipulate content within the structure using keys. Done so by following
+  the format:
+
+    table[key] = value
+
+    ^^^^^
+    Notice the usage of the "[]" square brackets
+]]
+myTable["myIndex"] = 100 -- Key "myIndex" set to "100" in table "myTable"
+myTable[1] = 20          -- Key "1" set to "20" in table "myTable"
+
+--[[
+  To access data, we use the same format, except now we don't use the assignment operator "="
+
+  If no data is present with that key, Lua will return "nil".
+
+  We can also delete values by just setting them to "nil"
+]]
+print(myTable[1]) -- 20 -> Based on what we set above
+print(myTable["thisKeyExists?"]) -- nil -> We did not set anything for this key above
+
+myTable.myIndex = 30 --[[
+  This is the other method to select values, this is the same as:
+
+  myTable["myIndex"]
+
+  ^^^^
+  Note this is not the same as myTable[myIndex]
+]]
+
+myTable2 = {first = 1, second = 2} --[[
+  Initialization can be done so this way, which would be the same as:
+
+      myTable2 = {["first"] = 1, ["second"] = 2}
+]]
+
+myArrayTable = {53, 34, 12} --[[
+  This can also be declared as
+
+      myArrayTable = {[1] = 53, [2] = 34, [3] = 12}
+]]
+print(myArrayTable[1]) -- Would print "53" because the first element is 53
+
+print(#myArrayTable) --[[
+  This gives us the length of all numerical keys (integer keys) in the array.
+
+  The "#" operator for this operation:
+
+    print(#{["hi"] = 1, 32, 4}) -> 2 Because "hi" is not numeric and will not be counted
+]]
 
 -----------------------------------------
 --[[ SECTION ARITHMETICS & Operations]]--
@@ -176,9 +253,34 @@ print("Hello World" + "its me") --[[
       print(1 + 3)  -> 4
 ]]
 
+
+-----------------------
+--[[ SECTION SCOPE ]]--
+-----------------------
+--[[
+  Scope can be defined as something's prevalence or visibility somewhere.
+
+    Hypothetical code:
+
+        1| var b
+        2| block
+        3|   var a
+        4| end
+    Variable "b" is alive from lines 1-4 while variable "a" is only alive within 2-3 (exclusive)
+]]
+
+
 --------------------------------------
 --[[SECTION CONTROLS & CONDITIONS ]]--
 --------------------------------------
+--[[
+  For any boolean expression Lua treats:
+
+    nil, false -> FALSE
+    Anything else -> TRUE
+
+    Statements like variable assignment are not treated as valid boolean expressions
+]]
 myBool = true
 myVar = 3
 
@@ -270,11 +372,93 @@ end --[[
   This format also increases readability
 ]]
 
+--[[LOOPS]]--
+--[[
+  Control statements for loops are:
+
+    break
+    continue
+
+]]
+
+while myBool do print("Hello World") end --[[
+  This is a basic LOOP. A while loop uses a boolean condition to make the loop run.
+
+  Only until the expression evaluates to false, does the loop exit.
+
+  They follow this format:
+
+    while [bool-expr] do <- Loop declaration
+      todo <- Blocks of code to execute
+    end <- Signifies the end of the loop definition
+
+    ^^^^
+    for [bool-expr], you can treat it like any expression you would use in an IF-ELSEIF-ELSE statements.
+]]
+
+repeat print("Hello world") until myBool --[[
+  Similar to a while-loop except that it runs until the condition after "until" becomes true
+
+  Follows this format:
+
+    repeat <- Loop declaration
+      todo <- Blocks of code to execute
+    until [bool-expr] <- Signified the end condition
+
+  [!] This loop is similar to a DO-WHILE loop in other languages in which it is guranteed to run at least once
+      and then check the condition after the first iteration.
+]]
+
+for i = 1, 10, 1 do print(i) end --[[
+  This is a numerical-step for-loop, it follows a similar fashion in many other languages.
+
+  It uses two formats:
+
+        for var = start, end, step do
+          todo <- Code to execute
+        end    <- Loop End Declaration
+
+        ^^^
+        Start -> the start counter
+        End   -> the end value to reach (if "var" is greater than end, the loop exits)
+        Step  -> How much to increment per iteration. This can also be negative, but will mean that the loop
+                will end only if "var" is less than "End"
+
+        for var = start, end do
+          todo <- Code to execute
+        end    <- Loop End Declaration
+
+        ^^^
+        This modification assumes "step" to be "+1"
+
+
+    In some languages like Java, C/C++, JavaScript, this kind of loop can be represented as:
+
+    ----- Lua ----- | ----- Other Langs. -----
+    for i=0,10 do   | for(var i=0;i<=10;i+=1){
+    end             | }
+
+    [!] Scoping does not allow the variable in a numerical step loop to be used outside of the loop block
+]]
+
+myTable = {1,2,3,4}
+for key,val in ipairs(myTable) do print(key.." "..val) end --[[
+  This is an iterator based loop. Primarily used for looping through a data structure like that of
+  a Table/Array.
+
+  They follow this format:
+
+    for var1,var2,var3...varN in [itr-expr] do
+      todo <- Code to execute
+    end    <- Loop End Declaration
+
+  [itr-expr] represents a valid iterator function. Most commonly we use the "ipairs()"
+    function to retrieve a key and value pair.
+]]
 
 ---------------------------
 --[[ SECTION FUNCTIONS ]]--
 ---------------------------
-
 function fun()
   print("Function!")
 end --[[
@@ -289,6 +473,9 @@ end --[[
       ^^^^^
       The function start also contains "args" which can be left blank or provided with a
       required argument to take. This is called function input/argument.
+
+  Within the stuffs to execute section, you can write code like any other part of the program we talked
+  about before. However, if you use parameters (described below), those are treated as a variable
 ]]
 
 function add(a, b)
@@ -306,6 +493,21 @@ print(add(1, 2)) --[[
           function m(a,b) c = a+b end
           print(m(1,2)) -> Nothing or ""
       -This is similar in many other languages: Kotlin/Java, C/C++, JavaScript/TypeScript
+      -The resultant should be treated as a "raw" value
+      -The only exception to no other statements after "return" is for conditional blocks:
+]]
+function conditionalReturns(a,b)
+  if a + b > 10 then return a + b - 10
+  elseif  a + b == 10 then return a + b + 10
+  end
+  return a+b
+end --[[
+  Conditional returns can have their return statements wrapped up.
+
+  Note the ending "return a+b". This is the "else" case. You can write
+  an "else" case withint he conditional block, but it is not necessary,
+  since if all otehr cases fail, the program will jump out and use the
+  last return.
 ]]
 
 fun() --[[
@@ -316,3 +518,28 @@ fun() --[[
 
       args? -> If argument required
 ]]
+
+myFunction = function(a,b) return a * b end
+print(myFunction(a,b)) -- We can also declare functions to variables and call them like this
+
+--[[
+  Builtin functions are functions that come prebundled with Lua.
+  Previously the "type()" and "print()" are builtin functions.
+  But there are more.
+
+  "tonumber","tointeger" etc are also builtin
+
+  You can find them by starting with "math.", "string."
+
+  There are a lot, so we will not mention all of them.
+  Check them out here:
+  http://lua-users.org/wiki/TutorialDirectory
+
+  Examples:
+]]
+string.len("Hello World") -- Gets the length of a provided string
+string.upper("yooooo")    -- Makes all characters in a string to uppercase (abc -> ABC)
+string.lower("yoink")     -- Makes all characters in a string to lowercase (ABC -> abc)
+math.min(2, 30000)        -- Returns the smallest of the two
+math.max(2, 30000)        -- Returns the largest of the two
+math.random(0, 100)       -- Returns a pseudorandom number from [start, end) where "end" is excluded and "start" is included
