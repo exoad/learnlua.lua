@@ -153,7 +153,7 @@ myTable = {} --[[
   We can access and manipulate content within the structure using keys. Done so by following
   the format:
 
-    table[key] = value
+    1| table[key] = value
 
     ^^^^^
     Notice the usage of the "[]" square brackets
@@ -174,7 +174,7 @@ print(myTable["thisKeyExists?"]) -- nil -> We did not set anything for this key 
 myTable.myIndex = 30 --[[
   This is the other method to select values, this is the same as:
 
-  myTable["myIndex"]
+    1| myTable["myIndex"]
 
   ^^^^
   Note this is not the same as myTable[myIndex]
@@ -183,13 +183,15 @@ myTable.myIndex = 30 --[[
 myTable2 = {first = 1, second = 2} --[[
   Initialization can be done so this way, which would be the same as:
 
-      myTable2 = {["first"] = 1, ["second"] = 2}
+      1| myTable2 = {["first"] = 1, ["second"] = 2}
+
 ]]
 
 myArrayTable = {53, 34, 12} --[[
   This can also be declared as
 
-      myArrayTable = {[1] = 53, [2] = 34, [3] = 12}
+      1| myArrayTable = {[1] = 53, [2] = 34, [3] = 12}
+
 ]]
 print(myArrayTable[1]) -- Would print "53" because the first element is 53
 
@@ -198,7 +200,8 @@ print(#myArrayTable) --[[
 
   The "#" operator for this operation:
 
-    print(#{["hi"] = 1, 32, 4}) -> 2 Because "hi" is not numeric and will not be counted
+    1| print(#{["hi"] = 1, 32, 4}) -- 2 Because "hi" is not numeric and will not be counted
+
 ]]
 
 -----------------------------------------
@@ -241,8 +244,9 @@ print("Hello World" .. "Its me") --[[
 
     Using this operation you can also "coerce" other types to a "String", take for example:
 
-        var_Num = 3
-        print("My Number: " .. varNum) <- Effectively coerce "var_Num" to be a String via String concat
+        1| var_Num = 3
+        2| print("My Number: " .. varNum) -- Effectively coerce "var_Num" to be a String via String concat
+
 ]]
 
 print("Hello World" + "its me") --[[
@@ -269,6 +273,7 @@ print("Hello World" + "its me") --[[
         2| block
         3|   var a
         4| end
+
     Variable "b" is alive from lines 1-4 while variable "a" is only alive within 2-3 (exclusive)
 
     In Lua, a variable without a scope modifier is referred to as a global variable.
@@ -325,9 +330,10 @@ if myBool then -- Note for boolean expressions, we don't have to do "myBool == t
 end --[[
   The most basic conditional statement is the "if" which follows the following format:
 
-      if boolean-condition then <- If condition declaration
-        todo                    <- Statement to run on boolean condition for true
-      end                       <- Marks the end of this case
+      1| if boolean-condition then -- If condition declaration
+      2|   todo                    -- Statement to run on boolean condition for true
+      3| end                       -- Marks the end of this case
+
     -If "boolean-condition" is true, then the "todo" code runs
   In the above code snippet, since "myBool" is true, then the program will print "I AM HUNGRY"
 ]]
@@ -435,9 +441,9 @@ while myBool do print("Hello World") end --[[
 
   They follow this format:
 
-    while [bool-expr] do <- Loop declaration
-      todo <- Blocks of code to execute
-    end <- Signifies the end of the loop definition
+    1| while [bool-expr] do <- Loop declaration
+    2|   todo <- Blocks of code to execute
+    3| end <- Signifies the end of the loop definition
 
     ^^^^
     for [bool-expr], you can treat it like any expression you would use in an IF-ELSEIF-ELSE statements.
@@ -448,9 +454,9 @@ repeat print("Hello world") until myBool --[[
 
   Follows this format:
 
-    repeat <- Loop declaration
-      todo <- Blocks of code to execute
-    until [bool-expr] <- Signified the end condition
+    1| repeat <- Loop declaration
+    2|   todo <- Blocks of code to execute
+    3| until [bool-expr] <- Signified the end condition
 
   [!] This loop is similar to a DO-WHILE loop in other languages in which it is guranteed to run at least once
       and then check the condition after the first iteration.
@@ -461,9 +467,9 @@ for i = 1, 10, 1 do print(i) end --[[
 
   It uses two formats:
 
-        for var = start, end, step do
-          todo <- Code to execute
-        end    <- Loop End Declaration
+        1| for var = start, end, step do
+        2|  todo <- Code to execute
+        3| end    <- Loop End Declaration
 
         ^^^
         Start -> the start counter
@@ -471,9 +477,9 @@ for i = 1, 10, 1 do print(i) end --[[
         Step  -> How much to increment per iteration. This can also be negative, but will mean that the loop
                 will end only if "var" is less than "End"
 
-        for var = start, end do
-          todo <- Code to execute
-        end    <- Loop End Declaration
+        1| for var = start, end do
+        2|   todo <- Code to execute
+        3| end    <- Loop End Declaration
 
         ^^^
         This modification assumes "step" to be "+1"
@@ -481,9 +487,10 @@ for i = 1, 10, 1 do print(i) end --[[
 
     In some languages like Java, C/C++, JavaScript, this kind of loop can be represented as:
 
-    ----- Lua ----- | ----- Other Langs. -----
-    for i=0,10 do   | for(var i=0;i<=10;i+=1){
-    end             | }
+    ----- Lua -----   |  ----- Other Langs. -----
+
+    1| for i=0,10 do  |  1| for(var i=0;i<=10;i+=1){
+    2| end            |  2| }
 
     [!] Scoping does not allow the variable in a numerical step loop to be used outside of the loop block
 ]]
@@ -495,9 +502,9 @@ for key,val in ipairs(myTable) do print(key.." "..val) end --[[
 
   They follow this format:
 
-    for var1,var2,var3...varN in [itr-expr] do
-      todo <- Code to execute
-    end    <- Loop End Declaration
+    1| for var1,var2,var3...varN in [itr-expr] do
+    2|  todo <- Code to execute
+    3| end    <- Loop End Declaration
 
   [itr-expr] represents a valid iterator function. Most commonly we use the "ipairs()"
     function to retrieve a key and value pair.
@@ -536,9 +543,9 @@ end --[[
 
   Functions follow the format of:
 
-      function functionName(args) <- The function start
-        todo <- Stuffs to execute
-      end <- The end of the function declaration (similar to a conditional block) ends with "end"
+      1| function functionName(args) <- The function start
+      2|  todo <- Stuffs to execute
+      3| end <- The end of the function declaration (similar to a conditional block) ends with "end"
 
       ^^^^^
       The function start also contains "args" which can be left blank or provided with a
@@ -640,6 +647,7 @@ setmetatable(myObj, myMetaTable) -- tell Lua we have a new metamethod we want to
 
       1| local myObjFinal = myObj + myObj
       2| print(myObjFinal)
+
 ]]
 
 --[[
@@ -652,18 +660,23 @@ setmetatable(myObj, myMetaTable) -- tell Lua we have a new metamethod we want to
 --[[ SECTION MODULES ]]--
 -------------------------
 --[[
+  [!] THIS IS TARGETTED FOR 5.2 AND ABOVE
+
   Modules is the most basic way for Lua code to be bundled and used together.
 
   You declare in the following fashion:
 
  -- BEGIN: file testModule.lua --
+
   1| local testModule = {} -- Note you don't specifically have to name the module the same as the file name
   2| function testModule.someFun() print("This is a test") end
   3| return testModule
+
 -- END: file testModule.lua
   To use this module in some other file, we use
   the "require" keyword:
 -- BEGIN: file testMyModule.lua --
+
   1| tM = require 'testModule'
   2| tM.someFun() -- prints "This is a test"
 
@@ -678,8 +691,68 @@ You can think of this as a JavaScript Module.exports:
     1| const pkgCode = require("myCodeHere")
 
 Or you can think of it as a C++ Namespace, Java Import/Class/Module
+
+You can also selectively expose modules contents:
+
+1) Declare certain functions as local
+2) This format:
+
+      1| local function f1() ... end
+      2| local function f2() ... end
+      3| return { f1 = f1, f2 = f2 }
+
+3) Combine 1 & 2:
+
+      1| local me = {}
+      2| local function f1() ... end
+      3| local function f2() ... end
+      4| me.f1 = f1
+      5| me.f2 = f2
+      6| return me
+
+There are some other ways: http://lua-users.org/wiki/ModulesTutorial (using Environment Variables)
 ]]
 
 
+------------------------------------
+--[[ SECTION OBJECT ORIENTATION ]]--
+------------------------------------
+--[[
+  Even though Lua is not OOP and there are no Class constructs, we can imitate using metatables.
 
+  We can achieve this by creating a table that represents a "class" and have metatable attributes like
+  "__index" and then we can use modular functions to create instance methods
+
+  We often use the "self" semi-keyword to refer to the current instance.
+
+  When we create a function with the first argument as "self" Lua automatically has a feature where if you want
+  access a member method within the instance, you can use the ":" operator to work on this instance without
+  having to call:
+
+      1| myInstance.func(myInstance, args)
+
+  Instead you can just do:
+
+      2| myInstance:func(args)
+
+  For example:
+]]
+
+local ExampleClass = {}
+ExampleClass.__index = ExampleClass -- if default lookup fails we daful to table lookups for method names
+function ExampleClass.new(init) -- a function equivalent to a constructor
+  local self = setmetatable({}, ExampleClass)
+  self.value = init
+  return self
+end
+function ExampleClass.set_val(self, val)
+  self.value = val
+end
+--Usage--
+local exampleClass_E = ExampleClass.new(5)
+exampleClass_E:set_val(1) -- value is now 1
+--[[
+  This seems quite similar to how some other languages do their OOP-ish
+  modularity, like JavaScript, Python, etc..
+]]
 
