@@ -7,8 +7,8 @@ Created by exoad
 
 My journey with Lua
 
-Targetted for 5.2+. You are more than welcome to contribute with addendums for other versions of Lua that have different dialect on how
-something should be used.
+Targetted for 5.2+. *You are more than welcome to contribute with addendums for other versions of Lua that have different dialect on how
+something should be used.*
 
 ## Reading
 
