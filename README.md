@@ -39,7 +39,7 @@ Each section is marked with a commented feature like so:<br>
 
 # TODOs
 
-- [ ] Make a web version -> Port all code to a website based.
+- [X] Make a web version -> Port all code to a website based.
 - [ ] Make a beginner friendly learning style and still keep the more experience cheatsheet
 - [ ] Make a generalized Lua Cheatsheet
 
