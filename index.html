@@ -1,4 +1,19 @@
-<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">  1
+<!-- HTML generated using hilite.me -->
+<div
+  style="
+    overflow: auto;
+    width: auto;
+    background: #1b2932;
+    border: solid #89eda4;
+    border-width: 0.1em 0.6em 0.1em 0.6em;
+    padding: 0.2em 0.3em;
+  "
+>
+  <table>
+    <tr>
+      <td>
+        <pre style="margin: 0; line-height: 125%">
+  1
   2
   3
   4
@@ -757,764 +772,774 @@
 757
 758
 759
-760</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-style: italic">----------------------------------</span>
-<span style="color: #008800; font-style: italic">--  Journey to speed learn Lua  --</span>
-<span style="color: #008800; font-style: italic">-- Created by Jack Meng (exoad) --</span>
-<span style="color: #008800; font-style: italic">----------------------------------</span>
-
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Extra Materials:</span>
-<span style="color: #008800; font-style: italic">  	1) https://www.lua.org/manual/5.1/manual.html</span>
-<span style="color: #008800; font-style: italic">  	2) http://lua-users.org/wiki/TutorialDirectory</span>
-
-<span style="color: #008800; font-style: italic">  This guide covers the expanse of most modern Lua dialects.</span>
-<span style="color: #008800; font-style: italic">  Starting from 5.2</span>
-<span style="color: #008800; font-style: italic">]]</span>
-
-<span style="color: #008800; font-style: italic">------------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION BASICS ]]--</span>
-<span style="color: #008800; font-style: italic">------------------------</span>
-<span style="color: #008800; font-style: italic">--[[</span>
-
-<span style="color: #008800; font-style: italic">  This is a comment, comments come in single line and multiline, all of which will</span>
-<span style="color: #008800; font-style: italic">  be ignored during runtime.</span>
-
-<span style="color: #008800; font-style: italic">  This is a multiline comment which starts with --[[ and ends with two &quot;]&quot;</span>
-<span style="color: #008800; font-style: italic">]]</span> <span style="color: #008800; font-style: italic">-- This is a single line comment, start a line with &quot;--&quot; and the statements after that line will be counted as comments.</span>
+760</pre
+        >
+      </td>
+      <td>
+        <pre
+          style="margin: 0; line-height: 125%"
+        ><span style="color: #859a9d; font-style: italic">----------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--  Journey to speed learn Lua  --</span>
+<span style="color: #859a9d; font-style: italic">-- Created by Jack Meng (exoad) --</span>
+<span style="color: #859a9d; font-style: italic">----------------------------------</span>
+
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Extra Materials:</span>
+<span style="color: #859a9d; font-style: italic">  	1) https://www.lua.org/manual/5.1/manual.html</span>
+<span style="color: #859a9d; font-style: italic">  	2) http://lua-users.org/wiki/TutorialDirectory</span>
+
+<span style="color: #859a9d; font-style: italic">  This guide covers the expanse of most modern Lua dialects.</span>
+<span style="color: #859a9d; font-style: italic">  Starting from 5.2</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+
+<span style="color: #859a9d; font-style: italic">------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION BASICS ]]--</span>
+<span style="color: #859a9d; font-style: italic">------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+
+<span style="color: #859a9d; font-style: italic">  This is a comment, comments come in single line and multiline, all of which will</span>
+<span style="color: #859a9d; font-style: italic">  be ignored during runtime.</span>
+
+<span style="color: #859a9d; font-style: italic">  This is a multiline comment which starts with --[[ and ends with two &quot;]&quot;</span>
+<span style="color: #859a9d; font-style: italic">]]</span> <span style="color: #859a9d; font-style: italic">-- This is a single line comment, start a line with &quot;--&quot; and the statements after that line will be counted as comments.</span>
+
+<span style="color: #f5a33f">print</span>() <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  The print() function is a primitive Input/Output function in Lua.</span>
+
+<span style="color: #859a9d; font-style: italic">  By running it with print() no arguments, nothing is printed.</span>
+
+<span style="color: #859a9d; font-style: italic">  By running it with arguments like print(&quot;Hello World&quot;) -&gt; Hello World will be printed to the</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Indentations and spacing are only enforced for specific codes and you will know when.</span>
+<span style="color: #859a9d; font-style: italic">  For most of the time, indentation is not enforced while spacing between terms are enforced.</span>
+
+<span style="color: #859a9d; font-style: italic">  My vocabulary:</span>
+
+<span style="color: #859a9d; font-style: italic">  &quot;raw-value&quot; or &quot;value&quot; -&gt; Literally raw values, like 1, 2, &quot;3&quot;, &quot;hello&quot;</span>
+<span style="color: #859a9d; font-style: italic">  	-These are not variables</span>
+<span style="color: #859a9d; font-style: italic">  	-They can be return resultants from a function</span>
+<span style="color: #859a9d; font-style: italic">  &quot;variable&quot; -&gt; A raw value that has a name attached to it</span>
+
+<span style="color: #859a9d; font-style: italic">  All reserved words &amp; operators in Lua:</span>
+<span style="color: #859a9d; font-style: italic">  and,break,do,else,elseif,and,false,for,function,if,in,local,nil,not,or,repeat,return,then</span>
+<span style="color: #859a9d; font-style: italic">	true,until,while,+,-,*,/,%,^,#,==,~=,&lt;=,&gt;=,&lt;,&gt;,=,(,),{,},[,],;,:,,,.,..,...</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+
+
+<span style="color: #859a9d; font-style: italic">-----------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION TYPES ]]--</span>
+<span style="color: #859a9d; font-style: italic">-----------------------</span>
+<span style="color: #f5a33f">type</span>() <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  The type() function is primitive to get the type of the argument.</span>
 
-<span style="color: #AA22FF">print</span>() <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  The print() function is a primitive Input/Output function in Lua.</span>
-
-<span style="color: #008800; font-style: italic">  By running it with print() no arguments, nothing is printed.</span>
-
-<span style="color: #008800; font-style: italic">  By running it with arguments like print(&quot;Hello World&quot;) -&gt; Hello World will be printed to the</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  By running it with an argument like type(&quot;Hello&quot;) it outputs &quot;String&quot; because &quot;Hello&quot; is a String</span>
 
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Indentations and spacing are only enforced for specific codes and you will know when.</span>
-<span style="color: #008800; font-style: italic">  For most of the time, indentation is not enforced while spacing between terms are enforced.</span>
-
-<span style="color: #008800; font-style: italic">  My vocabulary:</span>
+<span style="color: #859a9d; font-style: italic">  type(0)  	-&gt; Number</span>
+<span style="color: #859a9d; font-style: italic">  type(true)   -&gt; Boolean</span>
+<span style="color: #859a9d; font-style: italic">  type(nil)	-&gt; nil</span>
+<span style="color: #859a9d; font-style: italic">  type(&quot;Tree&quot;) -&gt; String</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  &quot;raw-value&quot; or &quot;value&quot; -&gt; Literally raw values, like 1, 2, &quot;3&quot;, &quot;hello&quot;</span>
-<span style="color: #008800; font-style: italic">  	-These are not variables</span>
-<span style="color: #008800; font-style: italic">  	-They can be return resultants from a function</span>
-<span style="color: #008800; font-style: italic">  &quot;variable&quot; -&gt; A raw value that has a name attached to it</span>
-
-<span style="color: #008800; font-style: italic">  All reserved words &amp; operators in Lua:</span>
-<span style="color: #008800; font-style: italic">  and,break,do,else,elseif,and,false,for,function,if,in,local,nil,not,or,repeat,return,then</span>
-<span style="color: #008800; font-style: italic">	true,until,while,+,-,*,/,%,^,#,==,~=,&lt;=,&gt;=,&lt;,&gt;,=,(,),{,},[,],;,:,,,.,..,...</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #f5a33f">print</span>(<span style="color: #f5a33f; font-weight: bold">nil</span>)
+<span style="color: #f5a33f">print</span>(<span style="color: #f5a33f">type</span>(<span style="color: #f5a33f; font-weight: bold">nil</span>)) <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  nil represents the absence of type.</span>
 
+<span style="color: #859a9d; font-style: italic">  Using print(type()) in conjunction allows you to print the type of said value to STDOUT</span>
 
-<span style="color: #008800; font-style: italic">-----------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION TYPES ]]--</span>
-<span style="color: #008800; font-style: italic">-----------------------</span>
-<span style="color: #AA22FF">type</span>() <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  The type() function is primitive to get the type of the argument.</span>
+<span style="color: #859a9d; font-style: italic">  Think of it as &quot;null&quot; in some other languages</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  By running it with an argument like type(&quot;Hello&quot;) it outputs &quot;String&quot; because &quot;Hello&quot; is a String</span>
+<span style="color: #f5a33f">print</span>(<span style="color: #6d5dfc">1</span>)
+<span style="color: #f5a33f">print</span>(<span style="color: #6d5dfc">3</span>)
+<span style="color: #f5a33f">print</span>(<span style="color: #6d5dfc">1.3</span>)
+<span style="color: #f5a33f">print</span>(<span style="color: #ff4286">-</span><span style="color: #6d5dfc">3</span>) <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  These are &quot;Number&quot; types. Numbers can be negative, floating point, positive, integer, aka number;</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  type(0)  	-&gt; Number</span>
-<span style="color: #008800; font-style: italic">  type(true)   -&gt; Boolean</span>
-<span style="color: #008800; font-style: italic">  type(nil)	-&gt; nil</span>
-<span style="color: #008800; font-style: italic">  type(&quot;Tree&quot;) -&gt; String</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Hello world&quot;</span>)
+<span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Hi!&quot;</span>) <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  These are &quot;String&quot; types. Which can be enclosed with double quotes(&quot;&quot;) or single quotes(&#39;&#39;)</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #AA22FF">print</span>(<span style="color: #AA22FF; font-weight: bold">nil</span>)
-<span style="color: #AA22FF">print</span>(<span style="color: #AA22FF">type</span>(<span style="color: #AA22FF; font-weight: bold">nil</span>)) <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  nil represents the absence of type.</span>
+<span style="color: #f5a33f">print</span>(<span style="color: #f5a33f; font-weight: bold">true</span>)
+<span style="color: #f5a33f">print</span>(<span style="color: #f5a33f; font-weight: bold">false</span>) <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  These are booleans, which represent two binary values &quot;true&quot; or &quot;false&quot;</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  Using print(type()) in conjunction allows you to print the type of said value to STDOUT</span>
 
-<span style="color: #008800; font-style: italic">  Think of it as &quot;null&quot; in some other languages</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">---------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION VARIABLES ]]</span> <span style="color: #859a9d; font-style: italic">--</span>
+<span style="color: #859a9d; font-style: italic">---------------------------</span>
+myVariable <span style="color: #ff4286">=</span> <span style="color: #f5a33f; font-weight: bold">nil</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Declaring variable follows the format of:</span>
 
-<span style="color: #AA22FF">print</span>(<span style="color: #666666">1</span>)
-<span style="color: #AA22FF">print</span>(<span style="color: #666666">3</span>)
-<span style="color: #AA22FF">print</span>(<span style="color: #666666">1.3</span>)
-<span style="color: #AA22FF">print</span>(<span style="color: #666666">-3</span>) <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  These are &quot;Number&quot; types. Numbers can be negative, floating point, positive, integer, aka number;</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  variableName = typeValue</span>
+<span style="color: #859a9d; font-style: italic">	-variableName is the literal variable&#39;s name</span>
+<span style="color: #859a9d; font-style: italic">    	a.) Can contain numbers, letters, and underscores</span>
+<span style="color: #859a9d; font-style: italic">    	b.) Cannot start with a number (0-9)</span>
+<span style="color: #859a9d; font-style: italic">	-typeValue is the value to set the variable to</span>
+<span style="color: #859a9d; font-style: italic">    	a.) This value is a value associated to a type, for example &quot;myVariable = 123&quot; would mean myVariable</span>
+<span style="color: #859a9d; font-style: italic">        	holds a &quot;Number&quot; type with value 123</span>
+<span style="color: #859a9d; font-style: italic">	-The assignment operator &quot;=&quot;</span>
+<span style="color: #859a9d; font-style: italic">  When you are unsure of the starting value, always declare the variable to &quot;nil&quot;</span>
 
-<span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Hello world&quot;</span>)
-<span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Hi!&quot;</span>) <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  These are &quot;String&quot; types. Which can be enclosed with double quotes(&quot;&quot;) or single quotes(&#39;&#39;)</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  - Variables may be reassigned for example:</span>
 
-<span style="color: #AA22FF">print</span>(<span style="color: #AA22FF; font-weight: bold">true</span>)
-<span style="color: #AA22FF">print</span>(<span style="color: #AA22FF; font-weight: bold">false</span>) <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  These are booleans, which represent two binary values &quot;true&quot; or &quot;false&quot;</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  	var_a = 1</span>
+<span style="color: #859a9d; font-style: italic">  	var_b = 3</span>
+<span style="color: #859a9d; font-style: italic">  	var_a = var_b &lt;- Here var_a would have a value of 3 and var_b with a value of 3</span>
 
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">---------------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION VARIABLES ]]</span> <span style="color: #008800; font-style: italic">--</span>
-<span style="color: #008800; font-style: italic">---------------------------</span>
-myVariable <span style="color: #666666">=</span> <span style="color: #AA22FF; font-weight: bold">nil</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Declaring variable follows the format of:</span>
+<span style="color: #f5a33f">print</span>(myVariable)
+<span style="color: #f5a33f">type</span>(myVariable) <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Using variables in functions is as simple as passing their name into a function</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  variableName = typeValue</span>
-<span style="color: #008800; font-style: italic">	-variableName is the literal variable&#39;s name</span>
-<span style="color: #008800; font-style: italic">    	a.) Can contain numbers, letters, and underscores</span>
-<span style="color: #008800; font-style: italic">    	b.) Cannot start with a number (0-9)</span>
-<span style="color: #008800; font-style: italic">	-typeValue is the value to set the variable to</span>
-<span style="color: #008800; font-style: italic">    	a.) This value is a value associated to a type, for example &quot;myVariable = 123&quot; would mean myVariable</span>
-<span style="color: #008800; font-style: italic">        	holds a &quot;Number&quot; type with value 123</span>
-<span style="color: #008800; font-style: italic">	-The assignment operator &quot;=&quot;</span>
-<span style="color: #008800; font-style: italic">  When you are unsure of the starting value, always declare the variable to &quot;nil&quot;</span>
+<span style="color: #f5a33f">tonumber</span>() <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This is a handy method for when you want to convert something to a</span>
+<span style="color: #859a9d; font-style: italic">  Number type (String-Number or Number). If it can&#39;t it would return &quot;nil&quot;</span>
 
-<span style="color: #008800; font-style: italic">  - Variables may be reassigned for example:</span>
+<span style="color: #859a9d; font-style: italic">  For example</span>
+<span style="color: #859a9d; font-style: italic">  	tonumber(&quot;HI&quot;) -&gt; nil</span>
+<span style="color: #859a9d; font-style: italic">  	tonumber(&quot;32&quot;) -&gt; 32</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  	var_a = 1</span>
-<span style="color: #008800; font-style: italic">  	var_b = 3</span>
-<span style="color: #008800; font-style: italic">  	var_a = var_b &lt;- Here var_a would have a value of 3 and var_b with a value of 3</span>
+<span style="color: #f5a33f">tostring</span>() <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This is a handy method to convert the argument to a String format.</span>
 
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  For example</span>
+<span style="color: #859a9d; font-style: italic">	tostring(false) -&gt; &quot;false&quot;</span>
+<span style="color: #859a9d; font-style: italic">	tostring(nil)   -&gt; &quot;nil&quot;</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #AA22FF">print</span>(myVariable)
-<span style="color: #AA22FF">type</span>(myVariable) <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Using variables in functions is as simple as passing their name into a function</span>
-<span style="color: #008800; font-style: italic">]]</span>
 
-<span style="color: #AA22FF">tonumber</span>() <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This is a handy method for when you want to convert something to a</span>
-<span style="color: #008800; font-style: italic">  Number type (String-Number or Number). If it can&#39;t it would return &quot;nil&quot;</span>
+<span style="color: #859a9d; font-style: italic">---------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION DATA STRUCTURES ]]--</span>
+<span style="color: #859a9d; font-style: italic">---------------------------------</span>
+myTable <span style="color: #ff4286">=</span> {} <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This is the only default data structure in Lua. This can be associated as an array or a table.</span>
 
-<span style="color: #008800; font-style: italic">  For example</span>
-<span style="color: #008800; font-style: italic">  	tonumber(&quot;HI&quot;) -&gt; nil</span>
-<span style="color: #008800; font-style: italic">  	tonumber(&quot;32&quot;) -&gt; 32</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  When treated as a table, we use mostly non-numeric String based keys.</span>
 
-<span style="color: #AA22FF">tostring</span>() <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This is a handy method to convert the argument to a String format.</span>
+<span style="color: #859a9d; font-style: italic">  When treated as an array, we use numeric based keys.</span>
 
-<span style="color: #008800; font-style: italic">  For example</span>
-<span style="color: #008800; font-style: italic">	tostring(false) -&gt; &quot;false&quot;</span>
-<span style="color: #008800; font-style: italic">	tostring(nil)   -&gt; &quot;nil&quot;</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  [!] VERY IMPORTANT. REMEMBER THAT LUA TREATS THE FIRST INDEX OF A TABLE/ARRAY AS &quot;1&quot; NOT &quot;0&quot;</span>
 
+<span style="color: #859a9d; font-style: italic">  There are no generic array types in Lua and thus we can mix both numeric and String based</span>
+<span style="color: #859a9d; font-style: italic">  key values in Lua.</span>
 
-<span style="color: #008800; font-style: italic">---------------------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION DATA STRUCTURES ]]--</span>
-<span style="color: #008800; font-style: italic">---------------------------------</span>
-myTable <span style="color: #666666">=</span> {} <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This is the only default data structure in Lua. This can be associated as an array or a table.</span>
+<span style="color: #859a9d; font-style: italic">  They are declared with &quot;{}&quot;</span>
 
-<span style="color: #008800; font-style: italic">  When treated as a table, we use mostly non-numeric String based keys.</span>
+<span style="color: #859a9d; font-style: italic">  We can access and manipulate content within the structure using keys. Done so by following</span>
+<span style="color: #859a9d; font-style: italic">  the format:</span>
 
-<span style="color: #008800; font-style: italic">  When treated as an array, we use numeric based keys.</span>
+<span style="color: #859a9d; font-style: italic">	1| table[key] = value</span>
 
-<span style="color: #008800; font-style: italic">  [!] VERY IMPORTANT. REMEMBER THAT LUA TREATS THE FIRST INDEX OF A TABLE/ARRAY AS &quot;1&quot; NOT &quot;0&quot;</span>
+<span style="color: #859a9d; font-style: italic">	^^^^^</span>
+<span style="color: #859a9d; font-style: italic">	Notice the usage of the &quot;[]&quot; square brackets</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+myTable[<span style="color: #00ad65">&quot;myIndex&quot;</span>] <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">100</span> <span style="color: #859a9d; font-style: italic">-- Key &quot;myIndex&quot; set to &quot;100&quot; in table &quot;myTable&quot;</span>
+myTable[<span style="color: #6d5dfc">1</span>] <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">20</span>      	<span style="color: #859a9d; font-style: italic">-- Key &quot;1&quot; set to &quot;20&quot; in table &quot;myTable&quot;</span>
 
-<span style="color: #008800; font-style: italic">  There are no generic array types in Lua and thus we can mix both numeric and String based</span>
-<span style="color: #008800; font-style: italic">  key values in Lua.</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  To access data, we use the same format, except now we don&#39;t use the assignment operator &quot;=&quot;</span>
 
-<span style="color: #008800; font-style: italic">  They are declared with &quot;{}&quot;</span>
+<span style="color: #859a9d; font-style: italic">  If no data is present with that key, Lua will return &quot;nil&quot;.</span>
 
-<span style="color: #008800; font-style: italic">  We can access and manipulate content within the structure using keys. Done so by following</span>
-<span style="color: #008800; font-style: italic">  the format:</span>
+<span style="color: #859a9d; font-style: italic">  We can also delete values by just setting them to &quot;nil&quot;</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+<span style="color: #f5a33f">print</span>(myTable[<span style="color: #6d5dfc">1</span>]) <span style="color: #859a9d; font-style: italic">-- 20 -&gt; Based on what we set above</span>
+<span style="color: #f5a33f">print</span>(myTable[<span style="color: #00ad65">&quot;thisKeyExists?&quot;</span>]) <span style="color: #859a9d; font-style: italic">-- nil -&gt; We did not set anything for this key above</span>
 
-<span style="color: #008800; font-style: italic">	1| table[key] = value</span>
+myTable.myIndex <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">30</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This is the other method to select values, this is the same as:</span>
 
-<span style="color: #008800; font-style: italic">	^^^^^</span>
-<span style="color: #008800; font-style: italic">	Notice the usage of the &quot;[]&quot; square brackets</span>
-<span style="color: #008800; font-style: italic">]]</span>
-myTable[<span style="color: #BB4444">&quot;myIndex&quot;</span>] <span style="color: #666666">=</span> <span style="color: #666666">100</span> <span style="color: #008800; font-style: italic">-- Key &quot;myIndex&quot; set to &quot;100&quot; in table &quot;myTable&quot;</span>
-myTable[<span style="color: #666666">1</span>] <span style="color: #666666">=</span> <span style="color: #666666">20</span>      	<span style="color: #008800; font-style: italic">-- Key &quot;1&quot; set to &quot;20&quot; in table &quot;myTable&quot;</span>
+<span style="color: #859a9d; font-style: italic">	1| myTable[&quot;myIndex&quot;]</span>
 
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  To access data, we use the same format, except now we don&#39;t use the assignment operator &quot;=&quot;</span>
+<span style="color: #859a9d; font-style: italic">  ^^^^</span>
+<span style="color: #859a9d; font-style: italic">  Note this is not the same as myTable[myIndex]</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  If no data is present with that key, Lua will return &quot;nil&quot;.</span>
+myTable2 <span style="color: #ff4286">=</span> {first <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">1</span>, second <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">2</span>} <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Initialization can be done so this way, which would be the same as:</span>
 
-<span style="color: #008800; font-style: italic">  We can also delete values by just setting them to &quot;nil&quot;</span>
-<span style="color: #008800; font-style: italic">]]</span>
-<span style="color: #AA22FF">print</span>(myTable[<span style="color: #666666">1</span>]) <span style="color: #008800; font-style: italic">-- 20 -&gt; Based on what we set above</span>
-<span style="color: #AA22FF">print</span>(myTable[<span style="color: #BB4444">&quot;thisKeyExists?&quot;</span>]) <span style="color: #008800; font-style: italic">-- nil -&gt; We did not set anything for this key above</span>
+<span style="color: #859a9d; font-style: italic">  	1| myTable2 = {[&quot;first&quot;] = 1, [&quot;second&quot;] = 2}</span>
 
-myTable.myIndex <span style="color: #666666">=</span> <span style="color: #666666">30</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This is the other method to select values, this is the same as:</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">	1| myTable[&quot;myIndex&quot;]</span>
+myArrayTable <span style="color: #ff4286">=</span> {<span style="color: #6d5dfc">53</span>, <span style="color: #6d5dfc">34</span>, <span style="color: #6d5dfc">12</span>} <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This can also be declared as</span>
 
-<span style="color: #008800; font-style: italic">  ^^^^</span>
-<span style="color: #008800; font-style: italic">  Note this is not the same as myTable[myIndex]</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  	1| myArrayTable = {[1] = 53, [2] = 34, [3] = 12}</span>
 
-myTable2 <span style="color: #666666">=</span> {first <span style="color: #666666">=</span> <span style="color: #666666">1</span>, second <span style="color: #666666">=</span> <span style="color: #666666">2</span>} <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Initialization can be done so this way, which would be the same as:</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+<span style="color: #f5a33f">print</span>(myArrayTable[<span style="color: #6d5dfc">1</span>]) <span style="color: #859a9d; font-style: italic">-- Would print &quot;53&quot; because the first element is 53</span>
 
-<span style="color: #008800; font-style: italic">  	1| myTable2 = {[&quot;first&quot;] = 1, [&quot;second&quot;] = 2}</span>
+<span style="color: #f5a33f">print</span>(<span style="color: #ff4286">#</span>myArrayTable) <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This gives us the length of all numerical keys (integer keys) in the array.</span>
 
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  The &quot;#&quot; operator for this operation:</span>
 
-myArrayTable <span style="color: #666666">=</span> {<span style="color: #666666">53</span>, <span style="color: #666666">34</span>, <span style="color: #666666">12</span>} <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This can also be declared as</span>
+<span style="color: #859a9d; font-style: italic">	1| print(#{[&quot;hi&quot;] = 1, 32, 4}) -- 2 Because &quot;hi&quot; is not numeric and will not be counted</span>
 
-<span style="color: #008800; font-style: italic">  	1| myArrayTable = {[1] = 53, [2] = 34, [3] = 12}</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">]]</span>
-<span style="color: #AA22FF">print</span>(myArrayTable[<span style="color: #666666">1</span>]) <span style="color: #008800; font-style: italic">-- Would print &quot;53&quot; because the first element is 53</span>
+<span style="color: #859a9d; font-style: italic">-----------------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION ARITHMETICS &amp; Operations]]--</span>
+<span style="color: #859a9d; font-style: italic">-----------------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Basic Arithmetics can be used on Number types and between Number types but never between</span>
+<span style="color: #859a9d; font-style: italic">  any other.</span>
 
-<span style="color: #AA22FF">print</span>(<span style="color: #666666">#</span>myArrayTable) <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This gives us the length of all numerical keys (integer keys) in the array.</span>
+<span style="color: #859a9d; font-style: italic">  Operators can be used between variables or raw values.</span>
 
-<span style="color: #008800; font-style: italic">  The &quot;#&quot; operator for this operation:</span>
+<span style="color: #859a9d; font-style: italic">  Operators are:</span>
 
-<span style="color: #008800; font-style: italic">	1| print(#{[&quot;hi&quot;] = 1, 32, 4}) -- 2 Because &quot;hi&quot; is not numeric and will not be counted</span>
+<span style="color: #859a9d; font-style: italic">  + -&gt; For addition                   	| 2+3	=&gt; 5</span>
+<span style="color: #859a9d; font-style: italic">  - -&gt; For subtraction                	| 2-3	=&gt; -1</span>
+<span style="color: #859a9d; font-style: italic">  * -&gt; For multiplication             	| 2*3	=&gt; 6</span>
+<span style="color: #859a9d; font-style: italic">  / -&gt; For division                   	| 2/3	~&gt; 0.67</span>
+<span style="color: #859a9d; font-style: italic">  ^ -&gt; For exponent (power) [NOT BIT XOR] | 2^3	=&gt; 8</span>
+<span style="color: #859a9d; font-style: italic">  % -&gt; For remainder (modulo)         	| 2%3	=&gt; 2</span>
+<span style="color: #859a9d; font-style: italic">  - -&gt; For value Negation             	| -(2+3) =&gt; -5</span>
 
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  THERE ARE NO POSTFIX OPERATORS IN LUA (i++, c--, ++a, ++b), thus you have to do (for maybe incrementation by 1):</span>
+<span style="color: #859a9d; font-style: italic">	my_Var = my_Var + 1</span>
 
-<span style="color: #008800; font-style: italic">-----------------------------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION ARITHMETICS &amp; Operations]]--</span>
-<span style="color: #008800; font-style: italic">-----------------------------------------</span>
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Basic Arithmetics can be used on Number types and between Number types but never between</span>
-<span style="color: #008800; font-style: italic">  any other.</span>
+<span style="color: #859a9d; font-style: italic">  Operator Precedence (highest [top] to lowest [bottom])</span>
+<span style="color: #859a9d; font-style: italic">  &quot;^&quot;</span>
+<span style="color: #859a9d; font-style: italic">  &quot;not&quot;</span>
+<span style="color: #859a9d; font-style: italic">  &quot;*&quot;,&quot;/&quot;</span>
+<span style="color: #859a9d; font-style: italic">  &quot;+&quot;,&quot;-&quot;</span>
+<span style="color: #859a9d; font-style: italic">  &quot;&lt;&quot;,&quot;&gt;&quot;,&quot;&lt;=&quot;,&quot;=&gt;&quot;,&quot;==&quot;,&quot;~=&quot;</span>
+<span style="color: #859a9d; font-style: italic">  &quot;and&quot;</span>
+<span style="color: #859a9d; font-style: italic">  &quot;or&quot;</span>
 
-<span style="color: #008800; font-style: italic">  Operators can be used between variables or raw values.</span>
+<span style="color: #859a9d; font-style: italic">  [!] Same operator precedence at the same level is executed based on their placement from left to right</span>
 
-<span style="color: #008800; font-style: italic">  Operators are:</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  + -&gt; For addition                   	| 2+3	=&gt; 5</span>
-<span style="color: #008800; font-style: italic">  - -&gt; For subtraction                	| 2-3	=&gt; -1</span>
-<span style="color: #008800; font-style: italic">  * -&gt; For multiplication             	| 2*3	=&gt; 6</span>
-<span style="color: #008800; font-style: italic">  / -&gt; For division                   	| 2/3	~&gt; 0.67</span>
-<span style="color: #008800; font-style: italic">  ^ -&gt; For exponent (power) [NOT BIT XOR] | 2^3	=&gt; 8</span>
-<span style="color: #008800; font-style: italic">  % -&gt; For remainder (modulo)         	| 2%3	=&gt; 2</span>
-<span style="color: #008800; font-style: italic">  - -&gt; For value Negation             	| -(2+3) =&gt; -5</span>
+<span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Hello World&quot;</span> <span style="color: #ff4286">..</span> <span style="color: #00ad65">&quot;Its me&quot;</span>) <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">	String concat, or adding two strings together is accomplished using the &quot;..&quot; operator</span>
 
-<span style="color: #008800; font-style: italic">  THERE ARE NO POSTFIX OPERATORS IN LUA (i++, c--, ++a, ++b), thus you have to do (for maybe incrementation by 1):</span>
-<span style="color: #008800; font-style: italic">	my_Var = my_Var + 1</span>
+<span style="color: #859a9d; font-style: italic">	Using this operation you can also &quot;coerce&quot; other types to a &quot;String&quot;, take for example:</span>
 
-<span style="color: #008800; font-style: italic">  Operator Precedence (highest [top] to lowest [bottom])</span>
-<span style="color: #008800; font-style: italic">  &quot;^&quot;</span>
-<span style="color: #008800; font-style: italic">  &quot;not&quot;</span>
-<span style="color: #008800; font-style: italic">  &quot;*&quot;,&quot;/&quot;</span>
-<span style="color: #008800; font-style: italic">  &quot;+&quot;,&quot;-&quot;</span>
-<span style="color: #008800; font-style: italic">  &quot;&lt;&quot;,&quot;&gt;&quot;,&quot;&lt;=&quot;,&quot;=&gt;&quot;,&quot;==&quot;,&quot;~=&quot;</span>
-<span style="color: #008800; font-style: italic">  &quot;and&quot;</span>
-<span style="color: #008800; font-style: italic">  &quot;or&quot;</span>
+<span style="color: #859a9d; font-style: italic">    	1| var_Num = 3</span>
+<span style="color: #859a9d; font-style: italic">    	2| print(&quot;My Number: &quot; .. varNum) -- Effectively coerce &quot;var_Num&quot; to be a String via String concat</span>
 
-<span style="color: #008800; font-style: italic">  [!] Same operator precedence at the same level is executed based on their placement from left to right</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Hello World&quot;</span> <span style="color: #ff4286">+</span> <span style="color: #00ad65">&quot;its me&quot;</span>) <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  String concat can also be achieved via the &quot;+&quot; addition operator and also has the same effects</span>
+<span style="color: #859a9d; font-style: italic">  as &quot;..&quot;</span>
 
-<span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Hello World&quot;</span> <span style="color: #666666">..</span> <span style="color: #BB4444">&quot;Its me&quot;</span>) <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">	String concat, or adding two strings together is accomplished using the &quot;..&quot; operator</span>
+<span style="color: #859a9d; font-style: italic">  However, remember that when both sides are numbers, the standard addition operation is performed.</span>
 
-<span style="color: #008800; font-style: italic">	Using this operation you can also &quot;coerce&quot; other types to a &quot;String&quot;, take for example:</span>
+<span style="color: #859a9d; font-style: italic">  Note:</span>
+<span style="color: #859a9d; font-style: italic">  	print(1 .. 3) -&gt; 13</span>
+<span style="color: #859a9d; font-style: italic">  	print(1 + 3)  -&gt; 4</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">    	1| var_Num = 3</span>
-<span style="color: #008800; font-style: italic">    	2| print(&quot;My Number: &quot; .. varNum) -- Effectively coerce &quot;var_Num&quot; to be a String via String concat</span>
 
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">-----------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION SCOPE ]]--</span>
+<span style="color: #859a9d; font-style: italic">-----------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Scope can be defined as something&#39;s prevalence or visibility somewhere.</span>
 
-<span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Hello World&quot;</span> <span style="color: #666666">+</span> <span style="color: #BB4444">&quot;its me&quot;</span>) <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  String concat can also be achieved via the &quot;+&quot; addition operator and also has the same effects</span>
-<span style="color: #008800; font-style: italic">  as &quot;..&quot;</span>
+<span style="color: #859a9d; font-style: italic">	Hypothetical code:</span>
 
-<span style="color: #008800; font-style: italic">  However, remember that when both sides are numbers, the standard addition operation is performed.</span>
+<span style="color: #859a9d; font-style: italic">    	1| var b</span>
+<span style="color: #859a9d; font-style: italic">    	2| block</span>
+<span style="color: #859a9d; font-style: italic">    	3|   var a</span>
+<span style="color: #859a9d; font-style: italic">    	4| end</span>
 
-<span style="color: #008800; font-style: italic">  Note:</span>
-<span style="color: #008800; font-style: italic">  	print(1 .. 3) -&gt; 13</span>
-<span style="color: #008800; font-style: italic">  	print(1 + 3)  -&gt; 4</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">	Variable &quot;b&quot; is alive from lines 1-4 while variable &quot;a&quot; is only alive within 2-3 (exclusive)</span>
 
+<span style="color: #859a9d; font-style: italic">	In Lua, a variable without a scope modifier is referred to as a global variable.</span>
 
-<span style="color: #008800; font-style: italic">-----------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION SCOPE ]]--</span>
-<span style="color: #008800; font-style: italic">-----------------------</span>
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Scope can be defined as something&#39;s prevalence or visibility somewhere.</span>
+<span style="color: #859a9d; font-style: italic">	To avoid conflicts between naming we add the &quot;local&quot; scope modifier in front of a variable name:</span>
 
-<span style="color: #008800; font-style: italic">	Hypothetical code:</span>
+<span style="color: #859a9d; font-style: italic">  	1| local myVariable = nil</span>
 
-<span style="color: #008800; font-style: italic">    	1| var b</span>
-<span style="color: #008800; font-style: italic">    	2| block</span>
-<span style="color: #008800; font-style: italic">    	3|   var a</span>
-<span style="color: #008800; font-style: italic">    	4| end</span>
+<span style="color: #859a9d; font-style: italic">	^^^^</span>
+<span style="color: #859a9d; font-style: italic">	Local variables only exist in their permitted block and nowhere else.</span>
 
-<span style="color: #008800; font-style: italic">	Variable &quot;b&quot; is alive from lines 1-4 while variable &quot;a&quot; is only alive within 2-3 (exclusive)</span>
+<span style="color: #859a9d; font-style: italic">	[!] Every loop iteration and function call creates a new scope with new variables.</span>
+<span style="color: #859a9d; font-style: italic">	[!] Generally you want to use &quot;local&quot; specifiers as much as possible in order to:</span>
+<span style="color: #859a9d; font-style: italic">        	1. Make your code more readable</span>
+<span style="color: #859a9d; font-style: italic">        	2. Create less trap variables that can lead to undesired behaviors.</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">	In Lua, a variable without a scope modifier is referred to as a global variable.</span>
+<span style="color: #f5a33f; font-weight: bold">local</span> t <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">3</span>
+t <span style="color: #ff4286">=</span> t <span style="color: #ff4286">+</span> <span style="color: #6d5dfc">2</span> <span style="color: #859a9d; font-style: italic">-- Here t is referenced and a global reference is not created.</span>
 
-<span style="color: #008800; font-style: italic">	To avoid conflicts between naming we add the &quot;local&quot; scope modifier in front of a variable name:</span>
+<span style="color: #f5a33f; font-weight: bold">local</span> <span style="color: #f5a33f; font-weight: bold">function</span> <span style="color: #12bad4">f</span>() <span style="color: #f5a33f; font-weight: bold">end</span>
+<span style="color: #f5a33f; font-weight: bold">local</span> f2
+f2 <span style="color: #ff4286">=</span> <span style="color: #f5a33f; font-weight: bold">function</span>() <span style="color: #f5a33f; font-weight: bold">end</span>
+<span style="color: #f5a33f; font-weight: bold">local</span> f3 <span style="color: #ff4286">=</span> <span style="color: #f5a33f; font-weight: bold">function</span>() <span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This section from lua-users.org:</span>
+<span style="color: #859a9d; font-style: italic">  &quot;&quot;&quot;</span>
+<span style="color: #859a9d; font-style: italic">  The difference between the last two examples is important: the local variable still doesn&#39;t exist to the right of the = that gives it the initial value. So if the contents of the function used f to get a reference to itself, it will correctly get the local variable in the first and second versions, but the third version will get the global f (which will be nil, if not a completely unrelated value set by some other code).</span>
+<span style="color: #859a9d; font-style: italic">  &quot;&quot;&quot;</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  	1| local myVariable = nil</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Closures are the effect that functions (local or not) can use locale variables outside; these functions</span>
+<span style="color: #859a9d; font-style: italic">  are therefore referred to as &quot;closures&quot;</span>
+<span style="color: #859a9d; font-style: italic">  	-The function sees any changes to the variable outside</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">	^^^^</span>
-<span style="color: #008800; font-style: italic">	Local variables only exist in their permitted block and nowhere else.</span>
 
-<span style="color: #008800; font-style: italic">	[!] Every loop iteration and function call creates a new scope with new variables.</span>
-<span style="color: #008800; font-style: italic">	[!] Generally you want to use &quot;local&quot; specifiers as much as possible in order to:</span>
-<span style="color: #008800; font-style: italic">        	1. Make your code more readable</span>
-<span style="color: #008800; font-style: italic">        	2. Create less trap variables that can lead to undesired behaviors.</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">--------------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[SECTION CONTROLS &amp; CONDITIONS ]]--</span>
+<span style="color: #859a9d; font-style: italic">--------------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  For any boolean expression Lua treats:</span>
 
-<span style="color: #AA22FF; font-weight: bold">local</span> t <span style="color: #666666">=</span> <span style="color: #666666">3</span>
-t <span style="color: #666666">=</span> t <span style="color: #666666">+</span> <span style="color: #666666">2</span> <span style="color: #008800; font-style: italic">-- Here t is referenced and a global reference is not created.</span>
+<span style="color: #859a9d; font-style: italic">	nil, false	-&gt; FALSE</span>
+<span style="color: #859a9d; font-style: italic">	Anything else -&gt; TRUE</span>
 
-<span style="color: #AA22FF; font-weight: bold">local</span> <span style="color: #AA22FF; font-weight: bold">function</span> <span style="color: #00A000">f</span>() <span style="color: #AA22FF; font-weight: bold">end</span>
-<span style="color: #AA22FF; font-weight: bold">local</span> f2
-f2 <span style="color: #666666">=</span> <span style="color: #AA22FF; font-weight: bold">function</span>() <span style="color: #AA22FF; font-weight: bold">end</span>
-<span style="color: #AA22FF; font-weight: bold">local</span> f3 <span style="color: #666666">=</span> <span style="color: #AA22FF; font-weight: bold">function</span>() <span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This section from lua-users.org:</span>
-<span style="color: #008800; font-style: italic">  &quot;&quot;&quot;</span>
-<span style="color: #008800; font-style: italic">  The difference between the last two examples is important: the local variable still doesn&#39;t exist to the right of the = that gives it the initial value. So if the contents of the function used f to get a reference to itself, it will correctly get the local variable in the first and second versions, but the third version will get the global f (which will be nil, if not a completely unrelated value set by some other code).</span>
-<span style="color: #008800; font-style: italic">  &quot;&quot;&quot;</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">	Statements like variable assignment are not treated as valid boolean expressions</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+myBool <span style="color: #ff4286">=</span> <span style="color: #f5a33f; font-weight: bold">true</span>
+myVar <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">3</span>
 
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Closures are the effect that functions (local or not) can use locale variables outside; these functions</span>
-<span style="color: #008800; font-style: italic">  are therefore referred to as &quot;closures&quot;</span>
-<span style="color: #008800; font-style: italic">  	-The function sees any changes to the variable outside</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #f5a33f; font-weight: bold">if</span> myBool <span style="color: #f5a33f; font-weight: bold">then</span> <span style="color: #859a9d; font-style: italic">-- Note for boolean expressions, we don&#39;t have to do &quot;myBool == true&quot;, you can, but is less concise</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;I AM HUNGRY&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  The most basic conditional statement is the &quot;if&quot; which follows the following format:</span>
 
+<span style="color: #859a9d; font-style: italic">  	1| if boolean-condition then -- If condition declaration</span>
+<span style="color: #859a9d; font-style: italic">  	2|   todo                	-- Statement to run on boolean condition for true</span>
+<span style="color: #859a9d; font-style: italic">  	3| end                   	-- Marks the end of this case</span>
 
-<span style="color: #008800; font-style: italic">--------------------------------------</span>
-<span style="color: #008800; font-style: italic">--[[SECTION CONTROLS &amp; CONDITIONS ]]--</span>
-<span style="color: #008800; font-style: italic">--------------------------------------</span>
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  For any boolean expression Lua treats:</span>
+<span style="color: #859a9d; font-style: italic">	-If &quot;boolean-condition&quot; is true, then the &quot;todo&quot; code runs</span>
+<span style="color: #859a9d; font-style: italic">  In the above code snippet, since &quot;myBool&quot; is true, then the program will print &quot;I AM HUNGRY&quot;</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">	nil, false	-&gt; FALSE</span>
-<span style="color: #008800; font-style: italic">	Anything else -&gt; TRUE</span>
+<span style="color: #f5a33f; font-weight: bold">if</span> myBool <span style="color: #f5a33f; font-weight: bold">then</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;I am hungry&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">else</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;I am not hungry&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  When we want to introduce a &quot;default&quot; case, we add the else keyword for when the other conditions fail.</span>
 
-<span style="color: #008800; font-style: italic">	Statements like variable assignment are not treated as valid boolean expressions</span>
-<span style="color: #008800; font-style: italic">]]</span>
-myBool <span style="color: #666666">=</span> <span style="color: #AA22FF; font-weight: bold">true</span>
-myVar <span style="color: #666666">=</span> <span style="color: #666666">3</span>
+<span style="color: #859a9d; font-style: italic">	There can only be one else statement per conditional statement</span>
 
-<span style="color: #AA22FF; font-weight: bold">if</span> myBool <span style="color: #AA22FF; font-weight: bold">then</span> <span style="color: #008800; font-style: italic">-- Note for boolean expressions, we don&#39;t have to do &quot;myBool == true&quot;, you can, but is less concise</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;I AM HUNGRY&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  The most basic conditional statement is the &quot;if&quot; which follows the following format:</span>
+<span style="color: #859a9d; font-style: italic">  [!] Note that the &quot;else&quot; statement does not utilize a &quot;then&quot; keyword</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  	1| if boolean-condition then -- If condition declaration</span>
-<span style="color: #008800; font-style: italic">  	2|   todo                	-- Statement to run on boolean condition for true</span>
-<span style="color: #008800; font-style: italic">  	3| end                   	-- Marks the end of this case</span>
+<span style="color: #f5a33f; font-weight: bold">if</span> myVar <span style="color: #ff4286">==</span> <span style="color: #6d5dfc">2</span> <span style="color: #f5a33f; font-weight: bold">then</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;2&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">elseif</span> myVar <span style="color: #ff4286">&gt;=</span> <span style="color: #6d5dfc">3</span> <span style="color: #f5a33f; font-weight: bold">then</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;&gt;=3&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">else</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;?&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  We can add intermediate conditional cases using the &quot;elseif [expr] then&quot; expression</span>
+<span style="color: #859a9d; font-style: italic">  which is just an &quot;if&quot; statement but renamed.</span>
 
-<span style="color: #008800; font-style: italic">	-If &quot;boolean-condition&quot; is true, then the &quot;todo&quot; code runs</span>
-<span style="color: #008800; font-style: italic">  In the above code snippet, since &quot;myBool&quot; is true, then the program will print &quot;I AM HUNGRY&quot;</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  Processing this conditional block goes from top to bottom.</span>
 
-<span style="color: #AA22FF; font-weight: bold">if</span> myBool <span style="color: #AA22FF; font-weight: bold">then</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;I am hungry&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">else</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;I am not hungry&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  When we want to introduce a &quot;default&quot; case, we add the else keyword for when the other conditions fail.</span>
+<span style="color: #859a9d; font-style: italic">  We could&#39;ve also ended the entire conditional block at the &quot;else-if&quot; with an &quot;end&quot; and not include a</span>
+<span style="color: #859a9d; font-style: italic">  default &quot;else&quot; case</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">	There can only be one else statement per conditional statement</span>
+<span style="color: #f5a33f; font-weight: bold">if</span> myVar <span style="color: #ff4286">==</span> <span style="color: #6d5dfc">2</span> <span style="color: #f5a33f; font-weight: bold">then</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;My var is 2!!&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Conditional operators are used to validate certain things. They are parsed as &quot;boolean expressions&quot; that</span>
+<span style="color: #859a9d; font-style: italic">  express &quot;booleans&quot;.</span>
 
-<span style="color: #008800; font-style: italic">  [!] Note that the &quot;else&quot; statement does not utilize a &quot;then&quot; keyword</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  Here are all of the conditional operators in Lua:</span>
+<span style="color: #859a9d; font-style: italic">	X &gt; Y  -&gt; X greater than Y</span>
+<span style="color: #859a9d; font-style: italic">	X &gt;= Y -&gt; X greater than or equal to Y</span>
+<span style="color: #859a9d; font-style: italic">	X &lt; Y  -&gt; X smaller than Y</span>
+<span style="color: #859a9d; font-style: italic">	X &lt;= Y -&gt; X smaller than or equal to Y</span>
+<span style="color: #859a9d; font-style: italic">	X == Y -&gt; X equals Y</span>
+<span style="color: #859a9d; font-style: italic">	X ~= Y -&gt; X does not equal Y</span>
 
-<span style="color: #AA22FF; font-weight: bold">if</span> myVar <span style="color: #666666">==</span> <span style="color: #666666">2</span> <span style="color: #AA22FF; font-weight: bold">then</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;2&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">elseif</span> myVar <span style="color: #666666">&gt;=</span> <span style="color: #666666">3</span> <span style="color: #AA22FF; font-weight: bold">then</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;&gt;=3&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">else</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;?&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  We can add intermediate conditional cases using the &quot;elseif [expr] then&quot; expression</span>
-<span style="color: #008800; font-style: italic">  which is just an &quot;if&quot; statement but renamed.</span>
+<span style="color: #859a9d; font-style: italic">  [!] When used with strings, they are evaluated based on the string&#39;s alphabetical ordering</span>
+<span style="color: #859a9d; font-style: italic">  [!] Type coercion does not work thus a statement like</span>
 
-<span style="color: #008800; font-style: italic">  Processing this conditional block goes from top to bottom.</span>
+<span style="color: #859a9d; font-style: italic">    	1| print(&quot;1&quot; == 1)</span>
 
-<span style="color: #008800; font-style: italic">  We could&#39;ve also ended the entire conditional block at the &quot;else-if&quot; with an &quot;end&quot; and not include a</span>
-<span style="color: #008800; font-style: italic">  default &quot;else&quot; case</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">    	^^^</span>
+<span style="color: #859a9d; font-style: italic">    	Returns false, and thus you have to use tonumber() or tostring()</span>
 
-<span style="color: #AA22FF; font-weight: bold">if</span> myVar <span style="color: #666666">==</span> <span style="color: #666666">2</span> <span style="color: #AA22FF; font-weight: bold">then</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;My var is 2!!&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Conditional operators are used to validate certain things. They are parsed as &quot;boolean expressions&quot; that</span>
-<span style="color: #008800; font-style: italic">  express &quot;booleans&quot;.</span>
+<span style="color: #859a9d; font-style: italic">  [!] When used with objects, they are not equal if:</span>
+<span style="color: #859a9d; font-style: italic">      	1. The types are different</span>
+<span style="color: #859a9d; font-style: italic">      	2. Refer to different objects</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  Here are all of the conditional operators in Lua:</span>
-<span style="color: #008800; font-style: italic">	X &gt; Y  -&gt; X greater than Y</span>
-<span style="color: #008800; font-style: italic">	X &gt;= Y -&gt; X greater than or equal to Y</span>
-<span style="color: #008800; font-style: italic">	X &lt; Y  -&gt; X smaller than Y</span>
-<span style="color: #008800; font-style: italic">	X &lt;= Y -&gt; X smaller than or equal to Y</span>
-<span style="color: #008800; font-style: italic">	X == Y -&gt; X equals Y</span>
-<span style="color: #008800; font-style: italic">	X ~= Y -&gt; X does not equal Y</span>
+<span style="color: #f5a33f; font-weight: bold">if</span> <span style="color: #f5a33f; font-weight: bold">not</span> myVar <span style="color: #ff4286">==</span> <span style="color: #6d5dfc">3</span> <span style="color: #f5a33f; font-weight: bold">then</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Not 2&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">elseif</span> myBool <span style="color: #f5a33f; font-weight: bold">and</span> myVar <span style="color: #ff4286">==</span> <span style="color: #6d5dfc">2</span> <span style="color: #f5a33f; font-weight: bold">then</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Both!&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">elseif</span> <span style="color: #f5a33f; font-weight: bold">not</span> myBool <span style="color: #f5a33f; font-weight: bold">or</span> myVar <span style="color: #ff4286">==</span> <span style="color: #6d5dfc">2</span> <span style="color: #f5a33f; font-weight: bold">then</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Maybe&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">else</span>
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;?&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Lua also provides conditional operators:</span>
+<span style="color: #859a9d; font-style: italic">	not</span>
+<span style="color: #859a9d; font-style: italic">	and</span>
+<span style="color: #859a9d; font-style: italic">	or</span>
 
-<span style="color: #008800; font-style: italic">  [!] When used with strings, they are evaluated based on the string&#39;s alphabetical ordering</span>
-<span style="color: #008800; font-style: italic">  [!] Type coercion does not work thus a statement like</span>
+<span style="color: #859a9d; font-style: italic">  -&quot;not&quot; we simply evaluate -&gt; &quot;not X&quot; expresses to &quot;true&quot; if X is &quot;false&quot; and vice versa</span>
+<span style="color: #859a9d; font-style: italic">  -&quot;and&quot; we simply require both sides of the expression to evaluate to true before the statement is fully evaluated as &quot;true&quot;</span>
+<span style="color: #859a9d; font-style: italic">  -&quot;or&quot; we simply require only one side of the expression to evaluate to true before the statement is fully evaluated as &quot;true&quot;</span>
 
-<span style="color: #008800; font-style: italic">    	1| print(&quot;1&quot; == 1)</span>
+<span style="color: #859a9d; font-style: italic">  [!] Note when we ever &quot;not&quot; a Number or String, Lua always returns &quot;false&quot;</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">    	^^^</span>
-<span style="color: #008800; font-style: italic">    	Returns false, and thus you have to use tonumber() or tostring()</span>
+<span style="color: #f5a33f; font-weight: bold">if</span> myVar <span style="color: #f5a33f; font-weight: bold">and</span> (<span style="color: #f5a33f; font-weight: bold">not</span> <span style="color: #f5a33f; font-weight: bold">true</span> <span style="color: #f5a33f; font-weight: bold">or</span> myVar <span style="color: #ff4286">==</span> <span style="color: #6d5dfc">3</span>) <span style="color: #f5a33f; font-weight: bold">then</span>
 
-<span style="color: #008800; font-style: italic">  [!] When used with objects, they are not equal if:</span>
-<span style="color: #008800; font-style: italic">      	1. The types are different</span>
-<span style="color: #008800; font-style: italic">      	2. Refer to different objects</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Take this hypothetical piece of conditional statement.</span>
 
-<span style="color: #AA22FF; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> myVar <span style="color: #666666">==</span> <span style="color: #666666">3</span> <span style="color: #AA22FF; font-weight: bold">then</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Not 2&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">elseif</span> myBool <span style="color: #AA22FF; font-weight: bold">and</span> myVar <span style="color: #666666">==</span> <span style="color: #666666">2</span> <span style="color: #AA22FF; font-weight: bold">then</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Both!&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">elseif</span> <span style="color: #AA22FF; font-weight: bold">not</span> myBool <span style="color: #AA22FF; font-weight: bold">or</span> myVar <span style="color: #666666">==</span> <span style="color: #666666">2</span> <span style="color: #AA22FF; font-weight: bold">then</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Maybe&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">else</span>
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;?&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Lua also provides conditional operators:</span>
-<span style="color: #008800; font-style: italic">	not</span>
-<span style="color: #008800; font-style: italic">	and</span>
-<span style="color: #008800; font-style: italic">	or</span>
+<span style="color: #859a9d; font-style: italic">  Since operations/operators have precedence, we can use &quot;()&quot; to group expression to make them</span>
+<span style="color: #859a9d; font-style: italic">  be evaluated first, thus increasing their precedence artificially.</span>
 
-<span style="color: #008800; font-style: italic">  -&quot;not&quot; we simply evaluate -&gt; &quot;not X&quot; expresses to &quot;true&quot; if X is &quot;false&quot; and vice versa</span>
-<span style="color: #008800; font-style: italic">  -&quot;and&quot; we simply require both sides of the expression to evaluate to true before the statement is fully evaluated as &quot;true&quot;</span>
-<span style="color: #008800; font-style: italic">  -&quot;or&quot; we simply require only one side of the expression to evaluate to true before the statement is fully evaluated as &quot;true&quot;</span>
+<span style="color: #859a9d; font-style: italic">  This format also increases readability</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  [!] Note when we ever &quot;not&quot; a Number or String, Lua always returns &quot;false&quot;</span>
-<span style="color: #008800; font-style: italic">]]</span>
+myLuaElvis <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">1</span><span style="color: #ff4286">+</span><span style="color: #6d5dfc">1</span><span style="color: #ff4286">==</span><span style="color: #6d5dfc">2</span> <span style="color: #f5a33f; font-weight: bold">and</span> <span style="color: #00ad65">&quot;Yes&quot;</span> <span style="color: #f5a33f; font-weight: bold">or</span> <span style="color: #00ad65">&quot;No&quot;</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Implementation of a basic Ternary operation in Lua.</span>
 
-<span style="color: #AA22FF; font-weight: bold">if</span> myVar <span style="color: #AA22FF; font-weight: bold">and</span> (<span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #AA22FF; font-weight: bold">true</span> <span style="color: #AA22FF; font-weight: bold">or</span> myVar <span style="color: #666666">==</span> <span style="color: #666666">3</span>) <span style="color: #AA22FF; font-weight: bold">then</span>
+<span style="color: #859a9d; font-style: italic">  Lua does not support Ternary or Elvis Operators for one line IF-ELSE</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Take this hypothetical piece of conditional statement.</span>
 
-<span style="color: #008800; font-style: italic">  Since operations/operators have precedence, we can use &quot;()&quot; to group expression to make them</span>
-<span style="color: #008800; font-style: italic">  be evaluated first, thus increasing their precedence artificially.</span>
+<span style="color: #859a9d; font-style: italic">--[[LOOPS]]--</span>
 
-<span style="color: #008800; font-style: italic">  This format also increases readability</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #f5a33f; font-weight: bold">while</span> myBool <span style="color: #f5a33f; font-weight: bold">do</span> <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Hello World&quot;</span>) <span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This is a basic LOOP. A while loop uses a boolean condition to make the loop run.</span>
 
-myLuaElvis <span style="color: #666666">=</span> <span style="color: #666666">1+1==2</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #BB4444">&quot;Yes&quot;</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #BB4444">&quot;No&quot;</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Implementation of a basic Ternary operation in Lua.</span>
+<span style="color: #859a9d; font-style: italic">  Only until the expression evaluates to false, does the loop exit.</span>
 
-<span style="color: #008800; font-style: italic">  Lua does not support Ternary or Elvis Operators for one line IF-ELSE</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  They follow this format:</span>
 
+<span style="color: #859a9d; font-style: italic">	1| while [bool-expr] do &lt;- Loop declaration</span>
+<span style="color: #859a9d; font-style: italic">	2|   todo &lt;- Blocks of code to execute</span>
+<span style="color: #859a9d; font-style: italic">	3| end &lt;- Signifies the end of the loop definition</span>
 
-<span style="color: #008800; font-style: italic">--[[LOOPS]]--</span>
+<span style="color: #859a9d; font-style: italic">	^^^^</span>
+<span style="color: #859a9d; font-style: italic">	for [bool-expr], you can treat it like any expression you would use in IF-ELSEIF-ELSE statements.</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #AA22FF; font-weight: bold">while</span> myBool <span style="color: #AA22FF; font-weight: bold">do</span> <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Hello World&quot;</span>) <span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This is a basic LOOP. A while loop uses a boolean condition to make the loop run.</span>
+<span style="color: #f5a33f; font-weight: bold">repeat</span> <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Hello world&quot;</span>) <span style="color: #f5a33f; font-weight: bold">until</span> myBool <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Similar to a while-loop except that it runs until the condition after &quot;until&quot; becomes true</span>
 
-<span style="color: #008800; font-style: italic">  Only until the expression evaluates to false, does the loop exit.</span>
+<span style="color: #859a9d; font-style: italic">  Follows this format:</span>
 
-<span style="color: #008800; font-style: italic">  They follow this format:</span>
+<span style="color: #859a9d; font-style: italic">	1| repeat &lt;- Loop declaration</span>
+<span style="color: #859a9d; font-style: italic">	2|   todo &lt;- Blocks of code to execute</span>
+<span style="color: #859a9d; font-style: italic">	3| until [bool-expr] &lt;- Signified the end condition</span>
 
-<span style="color: #008800; font-style: italic">	1| while [bool-expr] do &lt;- Loop declaration</span>
-<span style="color: #008800; font-style: italic">	2|   todo &lt;- Blocks of code to execute</span>
-<span style="color: #008800; font-style: italic">	3| end &lt;- Signifies the end of the loop definition</span>
+<span style="color: #859a9d; font-style: italic">  [!] This loop is similar to a DO-WHILE loop in other languages in which it is guaranteed to run at least once</span>
+<span style="color: #859a9d; font-style: italic">  	and then check the condition after the first iteration.</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">	^^^^</span>
-<span style="color: #008800; font-style: italic">	for [bool-expr], you can treat it like any expression you would use in IF-ELSEIF-ELSE statements.</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #f5a33f; font-weight: bold">for</span> i <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">1</span>, <span style="color: #6d5dfc">10</span>, <span style="color: #6d5dfc">1</span> <span style="color: #f5a33f; font-weight: bold">do</span> <span style="color: #f5a33f">print</span>(i) <span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This is a numerical-step for-loop, it follows a similar fashion in many other languages.</span>
 
-<span style="color: #AA22FF; font-weight: bold">repeat</span> <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Hello world&quot;</span>) <span style="color: #AA22FF; font-weight: bold">until</span> myBool <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Similar to a while-loop except that it runs until the condition after &quot;until&quot; becomes true</span>
+<span style="color: #859a9d; font-style: italic">  It uses two formats:</span>
 
-<span style="color: #008800; font-style: italic">  Follows this format:</span>
+<span style="color: #859a9d; font-style: italic">    	1| for var = start, end, step do</span>
+<span style="color: #859a9d; font-style: italic">    	2|  todo &lt;- Code to execute</span>
+<span style="color: #859a9d; font-style: italic">    	3| end	&lt;- Loop End Declaration</span>
 
-<span style="color: #008800; font-style: italic">	1| repeat &lt;- Loop declaration</span>
-<span style="color: #008800; font-style: italic">	2|   todo &lt;- Blocks of code to execute</span>
-<span style="color: #008800; font-style: italic">	3| until [bool-expr] &lt;- Signified the end condition</span>
+<span style="color: #859a9d; font-style: italic">    	^^^</span>
+<span style="color: #859a9d; font-style: italic">    	Start -&gt; the start counter</span>
+<span style="color: #859a9d; font-style: italic">    	End   -&gt; the end value to reach (if &quot;var&quot; is greater than end, the loop exits)</span>
+<span style="color: #859a9d; font-style: italic">    	Step  -&gt; How much to increment per iteration. This can also be negative, but will mean that the loop</span>
+<span style="color: #859a9d; font-style: italic">            	will end only if &quot;var&quot; is less than &quot;End&quot;</span>
 
-<span style="color: #008800; font-style: italic">  [!] This loop is similar to a DO-WHILE loop in other languages in which it is guaranteed to run at least once</span>
-<span style="color: #008800; font-style: italic">  	and then check the condition after the first iteration.</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">    	1| for var = start, end do</span>
+<span style="color: #859a9d; font-style: italic">    	2|   todo &lt;- Code to execute</span>
+<span style="color: #859a9d; font-style: italic">    	3| end	&lt;- Loop End Declaration</span>
 
-<span style="color: #AA22FF; font-weight: bold">for</span> i <span style="color: #666666">=</span> <span style="color: #666666">1</span>, <span style="color: #666666">10</span>, <span style="color: #666666">1</span> <span style="color: #AA22FF; font-weight: bold">do</span> <span style="color: #AA22FF">print</span>(i) <span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This is a numerical-step for-loop, it follows a similar fashion in many other languages.</span>
+<span style="color: #859a9d; font-style: italic">    	^^^</span>
+<span style="color: #859a9d; font-style: italic">    	This modification assumes &quot;step&quot; to be &quot;+1&quot;</span>
 
-<span style="color: #008800; font-style: italic">  It uses two formats:</span>
 
-<span style="color: #008800; font-style: italic">    	1| for var = start, end, step do</span>
-<span style="color: #008800; font-style: italic">    	2|  todo &lt;- Code to execute</span>
-<span style="color: #008800; font-style: italic">    	3| end	&lt;- Loop End Declaration</span>
+<span style="color: #859a9d; font-style: italic">	In some languages like Java, C/C++, JavaScript, this kind of loop can be represented as:</span>
 
-<span style="color: #008800; font-style: italic">    	^^^</span>
-<span style="color: #008800; font-style: italic">    	Start -&gt; the start counter</span>
-<span style="color: #008800; font-style: italic">    	End   -&gt; the end value to reach (if &quot;var&quot; is greater than end, the loop exits)</span>
-<span style="color: #008800; font-style: italic">    	Step  -&gt; How much to increment per iteration. This can also be negative, but will mean that the loop</span>
-<span style="color: #008800; font-style: italic">            	will end only if &quot;var&quot; is less than &quot;End&quot;</span>
+<span style="color: #859a9d; font-style: italic">	----- Lua -----   |  ----- Other Langs. -----</span>
 
-<span style="color: #008800; font-style: italic">    	1| for var = start, end do</span>
-<span style="color: #008800; font-style: italic">    	2|   todo &lt;- Code to execute</span>
-<span style="color: #008800; font-style: italic">    	3| end	&lt;- Loop End Declaration</span>
+<span style="color: #859a9d; font-style: italic">	1| for i=0,10 do  |  1| for(var i=0;i&lt;=10;i+=1){</span>
+<span style="color: #859a9d; font-style: italic">	2| end        	|  2| }</span>
 
-<span style="color: #008800; font-style: italic">    	^^^</span>
-<span style="color: #008800; font-style: italic">    	This modification assumes &quot;step&quot; to be &quot;+1&quot;</span>
+<span style="color: #859a9d; font-style: italic">	[!] Scoping does not allow the variable in a numerical step loop to be used outside of the loop block</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
+myTable <span style="color: #ff4286">=</span> {<span style="color: #6d5dfc">1</span>,<span style="color: #6d5dfc">2</span>,<span style="color: #6d5dfc">3</span>,<span style="color: #6d5dfc">4</span>}
+<span style="color: #f5a33f; font-weight: bold">for</span> key,val <span style="color: #f5a33f; font-weight: bold">in</span> <span style="color: #f5a33f">ipairs</span>(myTable) <span style="color: #f5a33f; font-weight: bold">do</span> <span style="color: #f5a33f">print</span>(key<span style="color: #ff4286">..</span><span style="color: #00ad65">&quot; &quot;</span><span style="color: #ff4286">..</span>val) <span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This is an iterator based loop. Primarily used for looping through a data structure like that of</span>
+<span style="color: #859a9d; font-style: italic">  a Table/Array.</span>
 
-<span style="color: #008800; font-style: italic">	In some languages like Java, C/C++, JavaScript, this kind of loop can be represented as:</span>
+<span style="color: #859a9d; font-style: italic">  They follow this format:</span>
 
-<span style="color: #008800; font-style: italic">	----- Lua -----   |  ----- Other Langs. -----</span>
+<span style="color: #859a9d; font-style: italic">	1| for var1,var2,var3...varN in [itr-expr] do</span>
+<span style="color: #859a9d; font-style: italic">	2|  todo &lt;- Code to execute</span>
+<span style="color: #859a9d; font-style: italic">	3| end	&lt;- Loop End Declaration</span>
 
-<span style="color: #008800; font-style: italic">	1| for i=0,10 do  |  1| for(var i=0;i&lt;=10;i+=1){</span>
-<span style="color: #008800; font-style: italic">	2| end        	|  2| }</span>
+<span style="color: #859a9d; font-style: italic">  [itr-expr] represents a valid iterator function. Most commonly we use the &quot;ipairs()&quot;</span>
+<span style="color: #859a9d; font-style: italic">	function to retrieve a key and value pair.</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">	[!] Scoping does not allow the variable in a numerical step loop to be used outside of the loop block</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Control statements for loops are:</span>
 
-myTable <span style="color: #666666">=</span> {<span style="color: #666666">1</span>,<span style="color: #666666">2</span>,<span style="color: #666666">3</span>,<span style="color: #666666">4</span>}
-<span style="color: #AA22FF; font-weight: bold">for</span> key,val <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #AA22FF">ipairs</span>(myTable) <span style="color: #AA22FF; font-weight: bold">do</span> <span style="color: #AA22FF">print</span>(key<span style="color: #666666">..</span><span style="color: #BB4444">&quot; &quot;</span><span style="color: #666666">..</span>val) <span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This is an iterator based loop. Primarily used for looping through a data structure like that of</span>
-<span style="color: #008800; font-style: italic">  a Table/Array.</span>
+<span style="color: #859a9d; font-style: italic">	break -&gt; jump out of the innermost loop</span>
+<span style="color: #859a9d; font-style: italic">	goto [expr] -&gt; tell the program to go to this point in the program</span>
+<span style="color: #859a9d; font-style: italic">  	- Goto a expression can be marked with &quot;::[expr-name]::&quot;</span>
 
-<span style="color: #008800; font-style: italic">  They follow this format:</span>
+<span style="color: #859a9d; font-style: italic">  	Like so:</span>
 
-<span style="color: #008800; font-style: italic">	1| for var1,var2,var3...varN in [itr-expr] do</span>
-<span style="color: #008800; font-style: italic">	2|  todo &lt;- Code to execute</span>
-<span style="color: #008800; font-style: italic">	3| end	&lt;- Loop End Declaration</span>
+<span style="color: #859a9d; font-style: italic">  	1| while true do</span>
+<span style="color: #859a9d; font-style: italic">  	2|  if someVar &gt; 100 then</span>
+<span style="color: #859a9d; font-style: italic">  	3|	goto outside</span>
+<span style="color: #859a9d; font-style: italic">  	4|  end</span>
+<span style="color: #859a9d; font-style: italic">  	5| end</span>
+<span style="color: #859a9d; font-style: italic">  	6| ::outside::</span>
 
-<span style="color: #008800; font-style: italic">  [itr-expr] represents a valid iterator function. Most commonly we use the &quot;ipairs()&quot;</span>
-<span style="color: #008800; font-style: italic">	function to retrieve a key and value pair.</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+myVarA <span style="color: #ff4286">=</span> <span style="color: #6d5dfc">1</span>
+<span style="color: #f5a33f; font-weight: bold">while</span> <span style="color: #f5a33f; font-weight: bold">true</span> <span style="color: #f5a33f; font-weight: bold">do</span>
+  myVarA <span style="color: #ff4286">=</span> myVarA <span style="color: #ff4286">+</span> <span style="color: #6d5dfc">1</span>
+  <span style="color: #f5a33f; font-weight: bold">if</span> myVarA <span style="color: #ff4286">&gt;</span> <span style="color: #6d5dfc">5</span> <span style="color: #f5a33f; font-weight: bold">then</span> <span style="color: #f5a33f; font-weight: bold">break</span> <span style="color: #f5a33f; font-weight: bold">end</span>
+<span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">-- BREAK PATTERN DEMONSTRATION</span>
 
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Control statements for loops are:</span>
+<span style="color: #859a9d; font-style: italic">---------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION FUNCTIONS ]]--</span>
+<span style="color: #859a9d; font-style: italic">---------------------------</span>
+<span style="color: #f5a33f; font-weight: bold">function</span> <span style="color: #12bad4">fun</span>()
+  <span style="color: #f5a33f">print</span>(<span style="color: #00ad65">&quot;Function!&quot;</span>)
+<span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Functions declare snippets of code that can be called and reused later.</span>
 
-<span style="color: #008800; font-style: italic">	break -&gt; jump out of the innermost loop</span>
-<span style="color: #008800; font-style: italic">	goto [expr] -&gt; tell the program to go to this point in the program</span>
-<span style="color: #008800; font-style: italic">  	- Goto a expression can be marked with &quot;::[expr-name]::&quot;</span>
+<span style="color: #859a9d; font-style: italic">  Functions follow the format of:</span>
 
-<span style="color: #008800; font-style: italic">  	Like so:</span>
+<span style="color: #859a9d; font-style: italic">  	1| function functionName(args) &lt;- The function start</span>
+<span style="color: #859a9d; font-style: italic">  	2|  todo &lt;- Stuffs to execute</span>
+<span style="color: #859a9d; font-style: italic">  	3| end &lt;- The end of the function declaration (similar to a conditional block) ends with &quot;end&quot;</span>
 
-<span style="color: #008800; font-style: italic">  	1| while true do</span>
-<span style="color: #008800; font-style: italic">  	2|  if someVar &gt; 100 then</span>
-<span style="color: #008800; font-style: italic">  	3|	goto outside</span>
-<span style="color: #008800; font-style: italic">  	4|  end</span>
-<span style="color: #008800; font-style: italic">  	5| end</span>
-<span style="color: #008800; font-style: italic">  	6| ::outside::</span>
+<span style="color: #859a9d; font-style: italic">  	^^^^^</span>
+<span style="color: #859a9d; font-style: italic">  	The function start also contains &quot;args&quot; which can be left blank or provided with a</span>
+<span style="color: #859a9d; font-style: italic">  	required argument to take. This is called function input/argument.</span>
 
-<span style="color: #008800; font-style: italic">]]</span>
-myVarA <span style="color: #666666">=</span> <span style="color: #666666">1</span>
-<span style="color: #AA22FF; font-weight: bold">while</span> <span style="color: #AA22FF; font-weight: bold">true</span> <span style="color: #AA22FF; font-weight: bold">do</span>
-  myVarA <span style="color: #666666">=</span> myVarA <span style="color: #666666">+</span> <span style="color: #666666">1</span>
-  <span style="color: #AA22FF; font-weight: bold">if</span> myVarA <span style="color: #666666">&gt;</span> <span style="color: #666666">5</span> <span style="color: #AA22FF; font-weight: bold">then</span> <span style="color: #AA22FF; font-weight: bold">break</span> <span style="color: #AA22FF; font-weight: bold">end</span>
-<span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">-- BREAK PATTERN DEMONSTRATION</span>
+<span style="color: #859a9d; font-style: italic">  Within the stuffs to execute section, you can write code like any other part of the program we talked</span>
+<span style="color: #859a9d; font-style: italic">  about before. However, if you use parameters (described below), those are treated as a variable</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">---------------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION FUNCTIONS ]]--</span>
-<span style="color: #008800; font-style: italic">---------------------------</span>
-<span style="color: #AA22FF; font-weight: bold">function</span> <span style="color: #00A000">fun</span>()
-  <span style="color: #AA22FF">print</span>(<span style="color: #BB4444">&quot;Function!&quot;</span>)
-<span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Functions declare snippets of code that can be called and reused later.</span>
+<span style="color: #f5a33f; font-weight: bold">function</span> <span style="color: #12bad4">add</span>(a, b)
+  <span style="color: #f5a33f; font-weight: bold">return</span> a <span style="color: #ff4286">+</span> b
+<span style="color: #f5a33f; font-weight: bold">end</span>
+<span style="color: #f5a33f">print</span>(add(<span style="color: #6d5dfc">1</span>, <span style="color: #6d5dfc">2</span>)) <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Functions can take input via adding variable names in between the parentheses.</span>
 
-<span style="color: #008800; font-style: italic">  Functions follow the format of:</span>
+<span style="color: #859a9d; font-style: italic">  This now means add() requires two arguments in order to work</span>
 
-<span style="color: #008800; font-style: italic">  	1| function functionName(args) &lt;- The function start</span>
-<span style="color: #008800; font-style: italic">  	2|  todo &lt;- Stuffs to execute</span>
-<span style="color: #008800; font-style: italic">  	3| end &lt;- The end of the function declaration (similar to a conditional block) ends with &quot;end&quot;</span>
+<span style="color: #859a9d; font-style: italic">  The &quot;return&quot; statement is straightforward, it represents a possible result</span>
+<span style="color: #859a9d; font-style: italic">  the function wants to return. However we cannot specify anything else after</span>
+<span style="color: #859a9d; font-style: italic">  this &quot;return&quot; statement</span>
+<span style="color: #859a9d; font-style: italic">  	-If no &quot;return&quot; statement is found, the function will not return a resultant:</span>
+<span style="color: #859a9d; font-style: italic">      	function m(a,b) c = a+b end</span>
+<span style="color: #859a9d; font-style: italic">      	print(m(1,2)) -&gt; Nothing or &quot;&quot;</span>
+<span style="color: #859a9d; font-style: italic">  	-This is similar in many other languages: Kotlin/Java, C/C++, JavaScript/TypeScript</span>
+<span style="color: #859a9d; font-style: italic">  	-The resultant should be treated as a &quot;raw&quot; value</span>
+<span style="color: #859a9d; font-style: italic">  	-The only exception to no other statements after &quot;return&quot; is for conditional blocks:</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+<span style="color: #f5a33f; font-weight: bold">function</span> <span style="color: #12bad4">conditionalReturns</span>(a,b)
+  <span style="color: #f5a33f; font-weight: bold">if</span> a <span style="color: #ff4286">+</span> b <span style="color: #ff4286">&gt;</span> <span style="color: #6d5dfc">10</span> <span style="color: #f5a33f; font-weight: bold">then</span> <span style="color: #f5a33f; font-weight: bold">return</span> a <span style="color: #ff4286">+</span> b <span style="color: #ff4286">-</span> <span style="color: #6d5dfc">10</span>
+  <span style="color: #f5a33f; font-weight: bold">elseif</span>  a <span style="color: #ff4286">+</span> b <span style="color: #ff4286">==</span> <span style="color: #6d5dfc">10</span> <span style="color: #f5a33f; font-weight: bold">then</span> <span style="color: #f5a33f; font-weight: bold">return</span> a <span style="color: #ff4286">+</span> b <span style="color: #ff4286">+</span> <span style="color: #6d5dfc">10</span>
+  <span style="color: #f5a33f; font-weight: bold">end</span>
+  <span style="color: #f5a33f; font-weight: bold">return</span> a<span style="color: #ff4286">+</span>b
+<span style="color: #f5a33f; font-weight: bold">end</span> <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Conditional returns can have their return statements wrapped up.</span>
 
-<span style="color: #008800; font-style: italic">  	^^^^^</span>
-<span style="color: #008800; font-style: italic">  	The function start also contains &quot;args&quot; which can be left blank or provided with a</span>
-<span style="color: #008800; font-style: italic">  	required argument to take. This is called function input/argument.</span>
+<span style="color: #859a9d; font-style: italic">  Note the ending &quot;return a+b&quot;. This is the &quot;else&quot; case. You can write</span>
+<span style="color: #859a9d; font-style: italic">  an &quot;else&quot; case within the conditional block, but it is not necessary,</span>
+<span style="color: #859a9d; font-style: italic">  since if all other cases fail, the program will jump out and use the</span>
+<span style="color: #859a9d; font-style: italic">  last return.</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  Within the stuffs to execute section, you can write code like any other part of the program we talked</span>
-<span style="color: #008800; font-style: italic">  about before. However, if you use parameters (described below), those are treated as a variable</span>
-<span style="color: #008800; font-style: italic">]]</span>
+fun() <span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Similar to calling print() and type()</span>
+<span style="color: #859a9d; font-style: italic">  calling any other function is as simple as:</span>
 
-<span style="color: #AA22FF; font-weight: bold">function</span> <span style="color: #00A000">add</span>(a, b)
-  <span style="color: #AA22FF; font-weight: bold">return</span> a <span style="color: #666666">+</span> b
-<span style="color: #AA22FF; font-weight: bold">end</span>
-<span style="color: #AA22FF">print</span>(add(<span style="color: #666666">1</span>, <span style="color: #666666">2</span>)) <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Functions can take input via adding variable names in between the parentheses.</span>
+<span style="color: #859a9d; font-style: italic">  	functionName(args?)</span>
 
-<span style="color: #008800; font-style: italic">  This now means add() requires two arguments in order to work</span>
+<span style="color: #859a9d; font-style: italic">  	args? -&gt; If argument required</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">  The &quot;return&quot; statement is straightforward, it represents a possible result</span>
-<span style="color: #008800; font-style: italic">  the function wants to return. However we cannot specify anything else after</span>
-<span style="color: #008800; font-style: italic">  this &quot;return&quot; statement</span>
-<span style="color: #008800; font-style: italic">  	-If no &quot;return&quot; statement is found, the function will not return a resultant:</span>
-<span style="color: #008800; font-style: italic">      	function m(a,b) c = a+b end</span>
-<span style="color: #008800; font-style: italic">      	print(m(1,2)) -&gt; Nothing or &quot;&quot;</span>
-<span style="color: #008800; font-style: italic">  	-This is similar in many other languages: Kotlin/Java, C/C++, JavaScript/TypeScript</span>
-<span style="color: #008800; font-style: italic">  	-The resultant should be treated as a &quot;raw&quot; value</span>
-<span style="color: #008800; font-style: italic">  	-The only exception to no other statements after &quot;return&quot; is for conditional blocks:</span>
-<span style="color: #008800; font-style: italic">]]</span>
-<span style="color: #AA22FF; font-weight: bold">function</span> <span style="color: #00A000">conditionalReturns</span>(a,b)
-  <span style="color: #AA22FF; font-weight: bold">if</span> a <span style="color: #666666">+</span> b <span style="color: #666666">&gt;</span> <span style="color: #666666">10</span> <span style="color: #AA22FF; font-weight: bold">then</span> <span style="color: #AA22FF; font-weight: bold">return</span> a <span style="color: #666666">+</span> b <span style="color: #666666">-</span> <span style="color: #666666">10</span>
-  <span style="color: #AA22FF; font-weight: bold">elseif</span>  a <span style="color: #666666">+</span> b <span style="color: #666666">==</span> <span style="color: #666666">10</span> <span style="color: #AA22FF; font-weight: bold">then</span> <span style="color: #AA22FF; font-weight: bold">return</span> a <span style="color: #666666">+</span> b <span style="color: #666666">+</span> <span style="color: #666666">10</span>
-  <span style="color: #AA22FF; font-weight: bold">end</span>
-  <span style="color: #AA22FF; font-weight: bold">return</span> a<span style="color: #666666">+</span>b
-<span style="color: #AA22FF; font-weight: bold">end</span> <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Conditional returns can have their return statements wrapped up.</span>
+myFunction <span style="color: #ff4286">=</span> <span style="color: #f5a33f; font-weight: bold">function</span>(a,b) <span style="color: #f5a33f; font-weight: bold">return</span> a <span style="color: #ff4286">*</span> b <span style="color: #f5a33f; font-weight: bold">end</span>
+<span style="color: #f5a33f">print</span>(myFunction(a,b)) <span style="color: #859a9d; font-style: italic">-- We can also declare functions to variables and call them like this</span>
 
-<span style="color: #008800; font-style: italic">  Note the ending &quot;return a+b&quot;. This is the &quot;else&quot; case. You can write</span>
-<span style="color: #008800; font-style: italic">  an &quot;else&quot; case within the conditional block, but it is not necessary,</span>
-<span style="color: #008800; font-style: italic">  since if all other cases fail, the program will jump out and use the</span>
-<span style="color: #008800; font-style: italic">  last return.</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Builtin functions are functions that come pre bundled with Lua.</span>
+<span style="color: #859a9d; font-style: italic">  Previously the &quot;type()&quot; and &quot;print()&quot; were builtin functions.</span>
+<span style="color: #859a9d; font-style: italic">  But there are more.</span>
 
-fun() <span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Similar to calling print() and type()</span>
-<span style="color: #008800; font-style: italic">  calling any other function is as simple as:</span>
+<span style="color: #859a9d; font-style: italic">  &quot;tonumber&quot;,&quot;tointeger&quot; etc are also built in</span>
 
-<span style="color: #008800; font-style: italic">  	functionName(args?)</span>
+<span style="color: #859a9d; font-style: italic">  You can find them by starting with &quot;math.&quot;, &quot;string.&quot;</span>
 
-<span style="color: #008800; font-style: italic">  	args? -&gt; If argument required</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">  There are a lot, so we will not mention all of them.</span>
+<span style="color: #859a9d; font-style: italic">  Check them out here:</span>
+<span style="color: #859a9d; font-style: italic">  http://lua-users.org/wiki/TutorialDirectory</span>
 
-myFunction <span style="color: #666666">=</span> <span style="color: #AA22FF; font-weight: bold">function</span>(a,b) <span style="color: #AA22FF; font-weight: bold">return</span> a <span style="color: #666666">*</span> b <span style="color: #AA22FF; font-weight: bold">end</span>
-<span style="color: #AA22FF">print</span>(myFunction(a,b)) <span style="color: #008800; font-style: italic">-- We can also declare functions to variables and call them like this</span>
+<span style="color: #859a9d; font-style: italic">  Examples:</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+<span style="color: #f5a33f">string.len</span>(<span style="color: #00ad65">&quot;Hello World&quot;</span>) <span style="color: #859a9d; font-style: italic">-- Gets the length of a provided string</span>
+<span style="color: #f5a33f">string.upper</span>(<span style="color: #00ad65">&quot;yooooo&quot;</span>)	<span style="color: #859a9d; font-style: italic">-- Makes all characters in a string to uppercase (abc -&gt; ABC)</span>
+<span style="color: #f5a33f">string.lower</span>(<span style="color: #00ad65">&quot;yoink&quot;</span>) 	<span style="color: #859a9d; font-style: italic">-- Makes all characters in a string to lowercase (ABC -&gt; abc)</span>
+<span style="color: #f5a33f">math.min</span>(<span style="color: #6d5dfc">2</span>, <span style="color: #6d5dfc">30000</span>)    	<span style="color: #859a9d; font-style: italic">-- Returns the smallest of the two</span>
+<span style="color: #f5a33f">math.max</span>(<span style="color: #6d5dfc">2</span>, <span style="color: #6d5dfc">30000</span>)    	<span style="color: #859a9d; font-style: italic">-- Returns the largest of the two</span>
+<span style="color: #f5a33f">math.random</span>(<span style="color: #6d5dfc">0</span>, <span style="color: #6d5dfc">100</span>)   	<span style="color: #859a9d; font-style: italic">-- Returns a pseudorandom number from [start, end) where &quot;end&quot; is excluded and &quot;start&quot; is included</span>
 
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Builtin functions are functions that come pre bundled with Lua.</span>
-<span style="color: #008800; font-style: italic">  Previously the &quot;type()&quot; and &quot;print()&quot; were builtin functions.</span>
-<span style="color: #008800; font-style: italic">  But there are more.</span>
 
-<span style="color: #008800; font-style: italic">  &quot;tonumber&quot;,&quot;tointeger&quot; etc are also built in</span>
+<span style="color: #859a9d; font-style: italic">-----------------------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION METAPROGRAMMING &amp; METAMETHODS ]]--</span>
+<span style="color: #859a9d; font-style: italic">-----------------------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Metamethods in Lua enables the programmer to overload certain functionalities in Lua objects.</span>
+<span style="color: #859a9d; font-style: italic">  	-Similar to the concept of operator overloading in a language like C++</span>
 
-<span style="color: #008800; font-style: italic">  You can find them by starting with &quot;math.&quot;, &quot;string.&quot;</span>
+<span style="color: #859a9d; font-style: italic">  Metables is a regular Table data structure that holds metamethods that can be called when specific</span>
+<span style="color: #859a9d; font-style: italic">  events in Lua are called. Like for example addition (&quot;+&quot; -&gt; __add)</span>
 
-<span style="color: #008800; font-style: italic">  There are a lot, so we will not mention all of them.</span>
-<span style="color: #008800; font-style: italic">  Check them out here:</span>
-<span style="color: #008800; font-style: italic">  http://lua-users.org/wiki/TutorialDirectory</span>
-
-<span style="color: #008800; font-style: italic">  Examples:</span>
-<span style="color: #008800; font-style: italic">]]</span>
-<span style="color: #AA22FF">string.len</span>(<span style="color: #BB4444">&quot;Hello World&quot;</span>) <span style="color: #008800; font-style: italic">-- Gets the length of a provided string</span>
-<span style="color: #AA22FF">string.upper</span>(<span style="color: #BB4444">&quot;yooooo&quot;</span>)	<span style="color: #008800; font-style: italic">-- Makes all characters in a string to uppercase (abc -&gt; ABC)</span>
-<span style="color: #AA22FF">string.lower</span>(<span style="color: #BB4444">&quot;yoink&quot;</span>) 	<span style="color: #008800; font-style: italic">-- Makes all characters in a string to lowercase (ABC -&gt; abc)</span>
-<span style="color: #AA22FF">math.min</span>(<span style="color: #666666">2</span>, <span style="color: #666666">30000</span>)    	<span style="color: #008800; font-style: italic">-- Returns the smallest of the two</span>
-<span style="color: #AA22FF">math.max</span>(<span style="color: #666666">2</span>, <span style="color: #666666">30000</span>)    	<span style="color: #008800; font-style: italic">-- Returns the largest of the two</span>
-<span style="color: #AA22FF">math.random</span>(<span style="color: #666666">0</span>, <span style="color: #666666">100</span>)   	<span style="color: #008800; font-style: italic">-- Returns a pseudorandom number from [start, end) where &quot;end&quot; is excluded and &quot;start&quot; is included</span>
-
-
-<span style="color: #008800; font-style: italic">-----------------------------------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION METAPROGRAMMING &amp; METAMETHODS ]]--</span>
-<span style="color: #008800; font-style: italic">-----------------------------------------------</span>
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Metamethods in Lua enables the programmer to overload certain functionalities in Lua objects.</span>
-<span style="color: #008800; font-style: italic">  	-Similar to the concept of operator overloading in a language like C++</span>
-
-<span style="color: #008800; font-style: italic">  Metables is a regular Table data structure that holds metamethods that can be called when specific</span>
-<span style="color: #008800; font-style: italic">  events in Lua are called. Like for example addition (&quot;+&quot; -&gt; __add)</span>
-
-<span style="color: #008800; font-style: italic">  To make a metatable work, we can use the following exemplar:</span>
-<span style="color: #008800; font-style: italic">]]</span>
-<span style="color: #AA22FF; font-weight: bold">local</span> myObj <span style="color: #666666">=</span> { attribute <span style="color: #666666">=</span> <span style="color: #BB4444">&quot;:)&quot;</span> }
-<span style="color: #AA22FF; font-weight: bold">local</span> myMetaTable <span style="color: #666666">=</span> {
-  __add <span style="color: #666666">=</span> <span style="color: #AA22FF; font-weight: bold">function</span>(lhs, rhs) <span style="color: #008800; font-style: italic">-- here lhs -&gt; LeftHandSide &amp; rhs -&gt; RightHandSide</span>
-  	<span style="color: #AA22FF; font-weight: bold">return</span> { value <span style="color: #666666">=</span> lhs.attribute <span style="color: #666666">..</span> rhs.attribute } <span style="color: #008800; font-style: italic">-- the desired operation for when the &quot;+&quot; or addition operation is performed on</span>
-                                                    	<span style="color: #008800; font-style: italic">-- two objects of myObj</span>
-  <span style="color: #AA22FF; font-weight: bold">end</span>
+<span style="color: #859a9d; font-style: italic">  To make a metatable work, we can use the following exemplar:</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+<span style="color: #f5a33f; font-weight: bold">local</span> myObj <span style="color: #ff4286">=</span> { attribute <span style="color: #ff4286">=</span> <span style="color: #00ad65">&quot;:)&quot;</span> }
+<span style="color: #f5a33f; font-weight: bold">local</span> myMetaTable <span style="color: #ff4286">=</span> {
+  __add <span style="color: #ff4286">=</span> <span style="color: #f5a33f; font-weight: bold">function</span>(lhs, rhs) <span style="color: #859a9d; font-style: italic">-- here lhs -&gt; LeftHandSide &amp; rhs -&gt; RightHandSide</span>
+  	<span style="color: #f5a33f; font-weight: bold">return</span> { value <span style="color: #ff4286">=</span> lhs.attribute <span style="color: #ff4286">..</span> rhs.attribute } <span style="color: #859a9d; font-style: italic">-- the desired operation for when the &quot;+&quot; or addition operation is performed on</span>
+                                                    	<span style="color: #859a9d; font-style: italic">-- two objects of myObj</span>
+  <span style="color: #f5a33f; font-weight: bold">end</span>
 }
-<span style="color: #AA22FF">setmetatable</span>(myObj, myMetaTable) <span style="color: #008800; font-style: italic">-- tell Lua we have a new metamethod we want to add</span>
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Thus we can now do things like</span>
+<span style="color: #f5a33f">setmetatable</span>(myObj, myMetaTable) <span style="color: #859a9d; font-style: italic">-- tell Lua we have a new metamethod we want to add</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Thus we can now do things like</span>
 
-<span style="color: #008800; font-style: italic">  	1| local myObjFinal = myObj + myObj</span>
-<span style="color: #008800; font-style: italic">  	2| print(myObjFinal)</span>
+<span style="color: #859a9d; font-style: italic">  	1| local myObjFinal = myObj + myObj</span>
+<span style="color: #859a9d; font-style: italic">  	2| print(myObjFinal)</span>
 
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  You can find a list of most overloadable metamethods that you can use here:</span>
-<span style="color: #008800; font-style: italic">  http://www.lua.org/manual/5.4/manual.html#2.4</span>
-<span style="color: #008800; font-style: italic">]]</span>
-
-
-<span style="color: #008800; font-style: italic">-------------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION MODULES ]]--</span>
-<span style="color: #008800; font-style: italic">-------------------------</span>
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  [!] THIS IS TARGETED FOR 5.2 AND ABOVE</span>
-
-<span style="color: #008800; font-style: italic">  Modules are the most basic way for Lua code to be bundled and used together.</span>
-
-<span style="color: #008800; font-style: italic">  You declare in the following fashion:</span>
-
-<span style="color: #008800; font-style: italic"> -- BEGIN: file testModule.lua --</span>
-
-<span style="color: #008800; font-style: italic">  1| local testModule = {} -- Note you don&#39;t specifically have to name the module the same as the file name</span>
-<span style="color: #008800; font-style: italic">  2| function testModule.someFun() print(&quot;This is a test&quot;) end</span>
-<span style="color: #008800; font-style: italic">  3| return testModule</span>
-
-<span style="color: #008800; font-style: italic">-- END: file testModule.lua</span>
-<span style="color: #008800; font-style: italic">  To use this module in some other file, we use</span>
-<span style="color: #008800; font-style: italic">  the &quot;require&quot; keyword:</span>
-<span style="color: #008800; font-style: italic">-- BEGIN: file testMyModule.lua --</span>
-
-<span style="color: #008800; font-style: italic">  1| tM = require &#39;testModule&#39;</span>
-<span style="color: #008800; font-style: italic">  2| tM.someFun() -- prints &quot;This is a test&quot;</span>
-
-<span style="color: #008800; font-style: italic">Modules are cached in the global table &quot;package.loaded&quot;.</span>
-<span style="color: #008800; font-style: italic">	-this also provides us the ability to reload:</span>
-
-<span style="color: #008800; font-style: italic">  	1| package.loaded.someModule = nil</span>
-<span style="color: #008800; font-style: italic">  	2| m = require &#39;someModule&#39;</span>
-
-<span style="color: #008800; font-style: italic">You can think of this as a JavaScript Module.exports:</span>
-
-<span style="color: #008800; font-style: italic">	1| const pkgCode = require(&quot;myCodeHere&quot;)</span>
-
-<span style="color: #008800; font-style: italic">Or you can think of it as a C++ Namespace, Java Import/Class/Module</span>
-
-<span style="color: #008800; font-style: italic">You can also selectively expose modules contents:</span>
-
-<span style="color: #008800; font-style: italic">1) Declare certain functions as local</span>
-<span style="color: #008800; font-style: italic">2) This format:</span>
-
-<span style="color: #008800; font-style: italic">  	1| local function f1() ... end</span>
-<span style="color: #008800; font-style: italic">  	2| local function f2() ... end</span>
-<span style="color: #008800; font-style: italic">  	3| return { f1 = f1, f2 = f2 }</span>
-
-<span style="color: #008800; font-style: italic">3) Combine 1 &amp; 2:</span>
-
-<span style="color: #008800; font-style: italic">  	1| local me = {}</span>
-<span style="color: #008800; font-style: italic">  	2| local function f1() ... end</span>
-<span style="color: #008800; font-style: italic">  	3| local function f2() ... end</span>
-<span style="color: #008800; font-style: italic">  	4| me.f1 = f1</span>
-<span style="color: #008800; font-style: italic">  	5| me.f2 = f2</span>
-<span style="color: #008800; font-style: italic">  	6| return me</span>
-
-<span style="color: #008800; font-style: italic">There are some other ways: http://lua-users.org/wiki/ModulesTutorial (using Environment Variables)</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  You can find a list of most overloadable metamethods that you can use here:</span>
+<span style="color: #859a9d; font-style: italic">  http://www.lua.org/manual/5.4/manual.html#2.4</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
 
 
-<span style="color: #008800; font-style: italic">------------------------------------</span>
-<span style="color: #008800; font-style: italic">--[[ SECTION OBJECT ORIENTATION ]]--</span>
-<span style="color: #008800; font-style: italic">------------------------------------</span>
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  Even though Lua is not OOP and there are no Class constructs, we can imitate using metatables.</span>
+<span style="color: #859a9d; font-style: italic">-------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION MODULES ]]--</span>
+<span style="color: #859a9d; font-style: italic">-------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  [!] THIS IS TARGETED FOR 5.2 AND ABOVE</span>
 
-<span style="color: #008800; font-style: italic">  We can achieve this by creating a table that represents a &quot;class&quot; and have metatable attributes like</span>
-<span style="color: #008800; font-style: italic">  &quot;__index&quot; and then we can use modular functions to create instance methods</span>
+<span style="color: #859a9d; font-style: italic">  Modules are the most basic way for Lua code to be bundled and used together.</span>
 
-<span style="color: #008800; font-style: italic">  We often use the &quot;self&quot; semi-keyword to refer to the current instance.</span>
+<span style="color: #859a9d; font-style: italic">  You declare in the following fashion:</span>
 
-<span style="color: #008800; font-style: italic">  When we create a function with the first argument as &quot;self&quot; Lua automatically has a feature where if you want</span>
-<span style="color: #008800; font-style: italic">  access a member method within the instance, you can use the &quot;:&quot; operator to work on this instance without</span>
-<span style="color: #008800; font-style: italic">  having to call:</span>
+<span style="color: #859a9d; font-style: italic"> -- BEGIN: file testModule.lua --</span>
 
-<span style="color: #008800; font-style: italic">  	1| myInstance.func(myInstance, args)</span>
+<span style="color: #859a9d; font-style: italic">  1| local testModule = {} -- Note you don&#39;t specifically have to name the module the same as the file name</span>
+<span style="color: #859a9d; font-style: italic">  2| function testModule.someFun() print(&quot;This is a test&quot;) end</span>
+<span style="color: #859a9d; font-style: italic">  3| return testModule</span>
 
-<span style="color: #008800; font-style: italic">  Instead you can just do:</span>
+<span style="color: #859a9d; font-style: italic">-- END: file testModule.lua</span>
+<span style="color: #859a9d; font-style: italic">  To use this module in some other file, we use</span>
+<span style="color: #859a9d; font-style: italic">  the &quot;require&quot; keyword:</span>
+<span style="color: #859a9d; font-style: italic">-- BEGIN: file testMyModule.lua --</span>
 
-<span style="color: #008800; font-style: italic">  	2| myInstance:func(args)</span>
+<span style="color: #859a9d; font-style: italic">  1| tM = require &#39;testModule&#39;</span>
+<span style="color: #859a9d; font-style: italic">  2| tM.someFun() -- prints &quot;This is a test&quot;</span>
 
-<span style="color: #008800; font-style: italic">  For example:</span>
-<span style="color: #008800; font-style: italic">]]</span>
+<span style="color: #859a9d; font-style: italic">Modules are cached in the global table &quot;package.loaded&quot;.</span>
+<span style="color: #859a9d; font-style: italic">	-this also provides us the ability to reload:</span>
 
-<span style="color: #AA22FF; font-weight: bold">local</span> ExampleClass <span style="color: #666666">=</span> {}
-ExampleClass.__index <span style="color: #666666">=</span> ExampleClass <span style="color: #008800; font-style: italic">-- if default lookup fails we daful to table lookups for method names</span>
-<span style="color: #AA22FF; font-weight: bold">function</span> <span style="color: #0000FF">ExampleClass</span>.<span style="color: #00A000">new</span>(init) <span style="color: #008800; font-style: italic">-- a function equivalent to a constructor</span>
-  <span style="color: #AA22FF; font-weight: bold">local</span> self <span style="color: #666666">=</span> <span style="color: #AA22FF">setmetatable</span>({}, ExampleClass)
-  self.value <span style="color: #666666">=</span> init
-  <span style="color: #AA22FF; font-weight: bold">return</span> self
-<span style="color: #AA22FF; font-weight: bold">end</span>
-<span style="color: #AA22FF; font-weight: bold">function</span> <span style="color: #0000FF">ExampleClass</span>.<span style="color: #00A000">set_val</span>(self, val)
-  self.value <span style="color: #666666">=</span> val
-<span style="color: #AA22FF; font-weight: bold">end</span>
-<span style="color: #008800; font-style: italic">--Usage--</span>
-<span style="color: #AA22FF; font-weight: bold">local</span> exampleClass_E <span style="color: #666666">=</span> ExampleClass.new(<span style="color: #666666">5</span>)
-exampleClass_E:set_val(<span style="color: #666666">1</span>) <span style="color: #008800; font-style: italic">-- value is now 1</span>
-<span style="color: #008800; font-style: italic">--[[</span>
-<span style="color: #008800; font-style: italic">  This seems quite similar to how some other languages do their OOP-ish</span>
-<span style="color: #008800; font-style: italic">  modularity, like JavaScript, Python, etc..</span>
-<span style="color: #008800; font-style: italic">]]</span>
-</pre></td></tr></table></div>
+<span style="color: #859a9d; font-style: italic">  	1| package.loaded.someModule = nil</span>
+<span style="color: #859a9d; font-style: italic">  	2| m = require &#39;someModule&#39;</span>
+
+<span style="color: #859a9d; font-style: italic">You can think of this as a JavaScript Module.exports:</span>
+
+<span style="color: #859a9d; font-style: italic">	1| const pkgCode = require(&quot;myCodeHere&quot;)</span>
+
+<span style="color: #859a9d; font-style: italic">Or you can think of it as a C++ Namespace, Java Import/Class/Module</span>
+
+<span style="color: #859a9d; font-style: italic">You can also selectively expose modules contents:</span>
+
+<span style="color: #859a9d; font-style: italic">1) Declare certain functions as local</span>
+<span style="color: #859a9d; font-style: italic">2) This format:</span>
+
+<span style="color: #859a9d; font-style: italic">  	1| local function f1() ... end</span>
+<span style="color: #859a9d; font-style: italic">  	2| local function f2() ... end</span>
+<span style="color: #859a9d; font-style: italic">  	3| return { f1 = f1, f2 = f2 }</span>
+
+<span style="color: #859a9d; font-style: italic">3) Combine 1 &amp; 2:</span>
+
+<span style="color: #859a9d; font-style: italic">  	1| local me = {}</span>
+<span style="color: #859a9d; font-style: italic">  	2| local function f1() ... end</span>
+<span style="color: #859a9d; font-style: italic">  	3| local function f2() ... end</span>
+<span style="color: #859a9d; font-style: italic">  	4| me.f1 = f1</span>
+<span style="color: #859a9d; font-style: italic">  	5| me.f2 = f2</span>
+<span style="color: #859a9d; font-style: italic">  	6| return me</span>
+
+<span style="color: #859a9d; font-style: italic">There are some other ways: http://lua-users.org/wiki/ModulesTutorial (using Environment Variables)</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+
+
+<span style="color: #859a9d; font-style: italic">------------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[ SECTION OBJECT ORIENTATION ]]--</span>
+<span style="color: #859a9d; font-style: italic">------------------------------------</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  Even though Lua is not OOP and there are no Class constructs, we can imitate using metatables.</span>
+
+<span style="color: #859a9d; font-style: italic">  We can achieve this by creating a table that represents a &quot;class&quot; and have metatable attributes like</span>
+<span style="color: #859a9d; font-style: italic">  &quot;__index&quot; and then we can use modular functions to create instance methods</span>
+
+<span style="color: #859a9d; font-style: italic">  We often use the &quot;self&quot; semi-keyword to refer to the current instance.</span>
+
+<span style="color: #859a9d; font-style: italic">  When we create a function with the first argument as &quot;self&quot; Lua automatically has a feature where if you want</span>
+<span style="color: #859a9d; font-style: italic">  access a member method within the instance, you can use the &quot;:&quot; operator to work on this instance without</span>
+<span style="color: #859a9d; font-style: italic">  having to call:</span>
+
+<span style="color: #859a9d; font-style: italic">  	1| myInstance.func(myInstance, args)</span>
+
+<span style="color: #859a9d; font-style: italic">  Instead you can just do:</span>
+
+<span style="color: #859a9d; font-style: italic">  	2| myInstance:func(args)</span>
+
+<span style="color: #859a9d; font-style: italic">  For example:</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+
+<span style="color: #f5a33f; font-weight: bold">local</span> ExampleClass <span style="color: #ff4286">=</span> {}
+ExampleClass.__index <span style="color: #ff4286">=</span> ExampleClass <span style="color: #859a9d; font-style: italic">-- if default lookup fails we daful to table lookups for method names</span>
+<span style="color: #f5a33f; font-weight: bold">function</span> <span style="color: #0e84b5; font-weight: bold">ExampleClass</span>.<span style="color: #12bad4">new</span>(init) <span style="color: #859a9d; font-style: italic">-- a function equivalent to a constructor</span>
+  <span style="color: #f5a33f; font-weight: bold">local</span> self <span style="color: #ff4286">=</span> <span style="color: #f5a33f">setmetatable</span>({}, ExampleClass)
+  self.value <span style="color: #ff4286">=</span> init
+  <span style="color: #f5a33f; font-weight: bold">return</span> self
+<span style="color: #f5a33f; font-weight: bold">end</span>
+<span style="color: #f5a33f; font-weight: bold">function</span> <span style="color: #0e84b5; font-weight: bold">ExampleClass</span>.<span style="color: #12bad4">set_val</span>(self, val)
+  self.value <span style="color: #ff4286">=</span> val
+<span style="color: #f5a33f; font-weight: bold">end</span>
+<span style="color: #859a9d; font-style: italic">--Usage--</span>
+<span style="color: #f5a33f; font-weight: bold">local</span> exampleClass_E <span style="color: #ff4286">=</span> ExampleClass.new(<span style="color: #6d5dfc">5</span>)
+exampleClass_E:set_val(<span style="color: #6d5dfc">1</span>) <span style="color: #859a9d; font-style: italic">-- value is now 1</span>
+<span style="color: #859a9d; font-style: italic">--[[</span>
+<span style="color: #859a9d; font-style: italic">  This seems quite similar to how some other languages do their OOP-ish</span>
+<span style="color: #859a9d; font-style: italic">  modularity, like JavaScript, Python, etc..</span>
+<span style="color: #859a9d; font-style: italic">]]</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+</div>
