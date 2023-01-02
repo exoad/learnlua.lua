@@ -19,7 +19,7 @@ print() --[[
 
   By running it with print() no arguments, nothing is printed.
 
-  By running it with arguments like print("Hello World") -> Hello World will be printed to the
+  By running it with arguments like print("Hello World") -> Hello World will be printed to the STDOUT
 ]]
 ```
 
