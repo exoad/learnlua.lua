@@ -10,6 +10,9 @@ My journey with Lua
 Targetted for 5.2+. *You are more than welcome to contribute with addendums for other versions of Lua that have different dialect on how
 something should be used.*
 
+**Read the barebones version here**<br>
+https://exoad.github.io/learnlua.lua/
+
 ## Reading
 
 Coding style is presented with a simple example followed by a commented explanation.
