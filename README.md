@@ -1,5 +1,7 @@
 # learnlua.lua
 
+> A great language to add for bindings with your C programs
+
 Speed Learn Lua with a comprehensive guide.<br>
 *This is more intuitive for a more experienced programmer*
 
